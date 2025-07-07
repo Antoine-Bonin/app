@@ -58,13 +58,22 @@ p {
     transition: var(--transition-all);
     letter-spacing: -0.02em;
     position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.arkly-logo-img {
+    height: 32px;
+    width: auto;
+    transition: var(--transition-all);
 }
 
 .arkly-logo::after {
     content: '';
     position: absolute;
     bottom: -2px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 2px;
     background: var(--accent);
@@ -72,12 +81,15 @@ p {
 }
 
 .arkly-logo:hover {
-    color: var(--text-primary);
     transform: translateY(-1px);
 }
 
+.arkly-logo:hover .arkly-logo-img {
+    opacity: 0.8;
+}
+
 .arkly-logo:hover::after {
-    width: 100%;
+    width: 90px; /* Largeur adaptée au texte "ARKLY" avec Orbitron */
 }
 
 /* Navigation links premium */

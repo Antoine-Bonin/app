@@ -7,7 +7,11 @@
     
     <!-- Meta Tags -->
     <meta name="description" content="Calculate ARKLY token investments on arkly.capital platform.">
-    <meta name="keywords" content="Real Estate Investment, DeFi Platform, Tokenization, ARKLY Token">
+    <meta name="keywords" content="Real Estate                         <a href="https://t.me/arklycap" target="_blank" class="arkly-social-link" aria-label="Telegram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </a>ent, DeFi Platform, Tokenization, ARKLY Token">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/reset.css">
@@ -111,11 +115,11 @@
         <div class="arkly-container">
             <!-- Platform Header -->
             <div style="text-align: center; margin-bottom: var(--spacing-12);">
-                <div class="arkly-badge arkly-badge-accent">Investment Platform</div>
+                <div class="arkly-badge arkly-badge-accent">Public Presale</div>
                 <h1 style="margin: var(--spacing-4) 0;">ARKLY Token Calculator</h1>
                 <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
-                    Calculate your ARKLY token purchase and view investment information. 
-                    Fixed price at $0.018 per ARKLY token.
+                    Public Presale – Fixed Price: $0.10<br>
+                    Seed round closed at $0.083 – now open to public at $0.10/token.
                 </p>
             </div>
 
@@ -126,7 +130,7 @@
                     <h2 style="margin-bottom: var(--spacing-4);">Buy ARKLY Tokens</h2>
                     <p style="color: var(--text-secondary); font-size: var(--text-lg); line-height: var(--leading-relaxed); max-width: 600px; margin: 0 auto;">
                         Purchase ARKLY tokens to access tokenized real estate investments on Solana. 
-                        Fixed price at <strong>$0.018 per ARKLY</strong>.
+                        Fixed price at <strong>$0.10 per ARKLY</strong>.
                     </p>
                 </div>
                 
@@ -135,7 +139,7 @@
                     <!-- Current Price Display -->
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--spacing-6); margin-bottom: var(--spacing-8);">
                         <div>
-                            <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--accent);">$0.018</div>
+                            <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--accent);">$0.10</div>
                             <div style="color: var(--text-secondary); font-size: var(--text-sm);">Price per ARKLY</div>
                         </div>
                         <div>
@@ -172,9 +176,9 @@
                         
                         <div style="text-align: center; margin-bottom: var(--spacing-4);">
                             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-2);">
-                                <button onclick="setAmount(1)" style="padding: var(--spacing-2); border: 1px solid var(--border-primary); border-radius: var(--radius-sm); background: var(--bg-primary); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;">1 SOL</button>
-                                <button onclick="setAmount(5)" style="padding: var(--spacing-2); border: 1px solid var(--border-primary); border-radius: var(--radius-sm); background: var(--bg-primary); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;">5 SOL</button>
+                                <button onclick="setAmount(2)" style="padding: var(--spacing-2); border: 1px solid var(--border-primary); border-radius: var(--radius-sm); background: var(--bg-primary); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;">2 SOL</button>
                                 <button onclick="setAmount(10)" style="padding: var(--spacing-2); border: 1px solid var(--border-primary); border-radius: var(--radius-sm); background: var(--bg-primary); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;">10 SOL</button>
+                                <button onclick="setAmount(25)" style="padding: var(--spacing-2); border: 1px solid var(--border-primary); border-radius: var(--radius-sm); background: var(--bg-primary); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;">25 SOL</button>
                             </div>
                         </div>
                         
@@ -191,7 +195,7 @@
                                     <div style="font-size: var(--text-sm); color: var(--text-secondary);">ARKLY Tokens</div>
                                 </div>
                                 <div>
-                                    <div style="font-weight: var(--font-bold); color: var(--success-text, #059669);">$0.018</div>
+                                    <div style="font-weight: var(--font-bold); color: var(--success-text, #059669);">$0.10</div>
                                     <div style="font-size: var(--text-sm); color: var(--text-secondary);">Fixed Price</div>
                                 </div>
                             </div>
@@ -201,20 +205,27 @@
                     <!-- Investment Tiers -->
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-4); margin-bottom: var(--spacing-6);">
                         <div style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); padding: var(--spacing-4); text-align: center;">
-                            <div style="color: var(--accent); font-weight: var(--font-bold); margin-bottom: var(--spacing-1);">Starter</div>
-                            <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--spacing-2);">0.1 - 5 SOL</div>
+                            <div style="color: var(--accent); font-weight: var(--font-bold); margin-bottom: var(--spacing-1);">Tier 1: Early Backer</div>
+                            <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--spacing-2);">2-10 SOL</div>
                             <div style="font-size: var(--text-xs); color: var(--text-tertiary);">Basic allocation</div>
                         </div>
                         <div style="background: var(--bg-secondary); border: 1px solid var(--warning-border, rgba(245, 158, 11, 0.2)); border-radius: var(--radius-md); padding: var(--spacing-4); text-align: center;">
-                            <div style="color: var(--warning-text, #d97706); font-weight: var(--font-bold); margin-bottom: var(--spacing-1);">Premium</div>
-                            <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--spacing-2);">5 - 25 SOL</div>
+                            <div style="color: var(--warning-text, #d97706); font-weight: var(--font-bold); margin-bottom: var(--spacing-1);">Tier 2: Growth Partner</div>
+                            <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--spacing-2);">10-25 SOL</div>
                             <div style="font-size: var(--text-xs); color: var(--text-tertiary);">Enhanced benefits</div>
                         </div>
                         <div style="background: var(--bg-secondary); border: 1px solid var(--success-border, rgba(34, 197, 94, 0.2)); border-radius: var(--radius-md); padding: var(--spacing-4); text-align: center;">
-                            <div style="color: var(--success-text, #059669); font-weight: var(--font-bold); margin-bottom: var(--spacing-1);">Whale Tier</div>
-                            <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--spacing-2);">25 - 100 SOL</div>
+                            <div style="color: var(--success-text, #059669); font-weight: var(--font-bold); margin-bottom: var(--spacing-1);">Tier 3: Strategic Whale</div>
+                            <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--spacing-2);">25-50 SOL</div>
                             <div style="font-size: var(--text-xs); color: var(--text-tertiary);">VIP access & support</div>
                         </div>
+                    </div>
+                    
+                    <!-- Allocation Note -->
+                    <div style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); padding: var(--spacing-4); margin-bottom: var(--spacing-6);">
+                        <p style="color: var(--text-secondary); font-size: var(--text-sm); margin: 0; text-align: center;">
+                            <strong>Note:</strong> The minimum allocation per wallet is 2 SOL. The maximum is capped at 50 SOL to ensure fair distribution.
+                        </p>
                     </div>
                     
                     <!-- Contact Information -->
@@ -244,7 +255,7 @@
                     <div style="text-align: left;">
                         <h4 style="color: var(--accent); margin-bottom: var(--spacing-3);">Token Benefits</h4>
                         <ul style="color: var(--text-secondary); font-size: var(--text-sm); line-height: var(--leading-relaxed); margin: 0; padding-left: var(--spacing-4);">
-                            <li>Fixed price at $0.018 per token</li>
+                            <li>Fixed price at $0.10 per token</li>
                             <li>Priority access to premium properties</li>
                             <li>Exclusive community access</li>
                             <li>Enhanced yield opportunities (8-12% APY)</li>
@@ -258,10 +269,10 @@
                         <ul style="color: var(--text-secondary); font-size: var(--text-sm); line-height: var(--leading-relaxed); margin: 0; padding-left: var(--spacing-4);">
                             <li><strong>Network:</strong> Solana Mainnet</li>
                             <li><strong>Token Standard:</strong> SPL Token</li>
-                            <li><strong>Fixed Price:</strong> $0.018 per ARKLY</li>
+                            <li><strong>Fixed Price:</strong> $0.10 per ARKLY</li>
                             <li><strong>Total Supply:</strong> 100M ARKLY</li>
-                            <li><strong>Minimum:</strong> 0.1 SOL (~$23)</li>
-                            <li><strong>Maximum:</strong> 100 SOL (~$23,000)</li>
+                            <li><strong>Minimum:</strong> 2 SOL (~$460)</li>
+                            <li><strong>Maximum:</strong> 50 SOL (~$11,500)</li>
                             <li><strong>Instant delivery:</strong> No vesting</li>
                             <li><strong>Token Type:</strong> Platform utility token</li>
                         </ul>
@@ -273,6 +284,29 @@
                         <strong>⚠️ Important:</strong> This is a demonstration interface. Always verify official contacts and terms before making any purchase. 
                         For questions, contact <a href="mailto:support@arkly.capital" style="color: var(--accent);">support@arkly.capital</a>
                     </p>
+                </div>
+                
+                <!-- Presale Summary -->
+                <div style="margin-top: var(--spacing-8); padding: var(--spacing-6); background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-lg);">
+                    <h4 style="color: var(--accent); margin-bottom: var(--spacing-4); text-align: center;">Presale Summary</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-4); text-align: center;">
+                        <div>
+                            <div style="font-weight: var(--font-bold); color: var(--text-primary); font-size: var(--text-lg);">2 to 50 SOL</div>
+                            <div style="font-size: var(--text-sm); color: var(--text-secondary);">Presale cap per wallet</div>
+                        </div>
+                        <div>
+                            <div style="font-weight: var(--font-bold); color: var(--accent); font-size: var(--text-lg);">$0.10</div>
+                            <div style="font-size: var(--text-sm); color: var(--text-secondary);">Price per $ARK</div>
+                        </div>
+                        <div>
+                            <div style="font-weight: var(--font-bold); color: var(--success-text, #059669); font-size: var(--text-lg);">Instant</div>
+                            <div style="font-size: var(--text-sm); color: var(--text-secondary);">All tokens delivered instantly – no vesting</div>
+                        </div>
+                        <div>
+                            <div style="font-weight: var(--font-bold); color: var(--warning-text, #d97706); font-size: var(--text-lg);">$750,000</div>
+                            <div style="font-size: var(--text-sm); color: var(--text-secondary);">Target raise</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -336,15 +370,35 @@
             <div class="arkly-footer-content">
                 <div class="arkly-footer-section">
                     <h4>arkly.capital</h4>
-                    <p>Premium real estate investment platform built on Solana blockchain infrastructure.</p>
+                    <p>Bridging traditional real estate with decentralized finance through tokenized rental properties.</p>
+                    <div class="arkly-social-links">
+                        <a href="https://x.com/arklycap?s=21" target="_blank" class="arkly-social-link" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/arklycap" target="_blank" class="arkly-social-link" aria-label="Telegram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="arkly-footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
                 
                 <div class="arkly-footer-section">
                     <h4>Platform</h4>
                     <ul>
-                        <li><a href="app.html">Investment Calculator</a></li>
-                        <li><a href="#" style="opacity: 0.5;">Portfolio (Coming Soon)</a></li>
-                        <li><a href="#" style="opacity: 0.5;">Trading (Coming Soon)</a></li>
+                        <li><a href="app.html">Join Waitlist</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="security.html">Security</a></li>
                     </ul>
                 </div>
@@ -358,20 +412,11 @@
                         <li><a href="terms.html">Terms</a></li>
                     </ul>
                 </div>
-                
-                <div class="arkly-footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="contact.html">General Inquiries</a></li>
-                        <li><a href="mailto:platform@arkly.capital">Platform Support</a></li>
-                        <li><a href="mailto:purchase@arkly.capital">Token Purchase</a></li>
-                    </ul>
-                </div>
             </div>
             
             <div class="arkly-footer-bottom">
-                <p>&copy; 2025 arkly.capital. All rights reserved.</p>
-                <p>Securities offered through licensed broker-dealers. Past performance does not guarantee future results.</p>
+                <p>&copy; 2025 Arkly Capital Ltd. All rights reserved.</p>
+                <p>Arkly Capital Ltd. is an international private company incorporated under the International Business Companies Act, 2016 (Seychelles). Registered number: IBC-247019. Registered office: Suite 1, Global Capital House, Mont Fleuri, Victoria, Mahé, Seychelles. This site does not constitute investment advice or an offer to solicit investments.</p>
             </div>
         </div>
     </footer>
@@ -380,7 +425,7 @@
     <script src="./js/main.js"></script>
     <script>
         // Simplified calculator - no wallet integration
-        const tokenPrice = 0.018; // Fixed price of $0.018 per ARKLY token
+        const tokenPrice = 0.10; // Fixed price of $0.10 per ARKLY token
         const solPrice = 230; // SOL price in USD
         
         function calculateTokensFromSOL(solAmount) {
@@ -399,7 +444,7 @@
             
             if (solAmount > 0) {
                 const tokens = calculateTokensFromSOL(solAmount);
-                const usdValue = solAmount * solPrice;
+                const usdValue = solAmount * solPrice2;
                 
                 tokenOutput.value = `${tokens.toLocaleString()} ARKLY`;
                 
@@ -491,1391 +536,6 @@
             // Show welcome message
             setTimeout(() => {
                 showNotification('Welcome to the ARKLY token calculator! Enter a SOL amount to see your potential token purchase.', 'info');
-            }, 1000);
-        });
-    </script>
-</body>
-</html>
-        
-        /* Shimmer animation for buy button */
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        
-        .buy-btn-enabled {
-            background: linear-gradient(135deg, #10b981, #059669) !important;
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
-            transform: translateY(-1px);
-        }
-        
-        .buy-btn-enabled:hover {
-            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5);
-            transform: translateY(-2px);
-        }
-        
-        .wallet-disconnect {
-            background: var(--bg-secondary);
-            color: var(--text-secondary);
-            border: 1px solid var(--border-primary);
-        }
-        
-        .wallet-disconnect:hover {
-            background: var(--error-bg, rgba(239, 68, 68, 0.1));
-            border-color: var(--error-border, rgba(239, 68, 68, 0.2));
-        }
-        
-        .coming-soon {
-            margin-top: var(--spacing-12);
-            padding: var(--spacing-8);
-            background: var(--bg-primary);
-            border: 1px solid var(--border-primary);
-            border-radius: var(--radius-lg);
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-6);
-            margin-top: var(--spacing-8);
-        }
-        
-        .feature-item {
-            padding: var(--spacing-6);
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-primary);
-            border-radius: var(--radius-lg);
-            opacity: 0.6;
-        }
-        
-        .feature-item h3 {
-            margin-bottom: var(--spacing-3);
-            color: var(--text-primary);
-        }
-        
-        .status-badge {
-            display: inline-block;
-            padding: var(--spacing-1) var(--spacing-3);
-            background: var(--warning-bg, rgba(245, 158, 11, 0.1));
-            color: var(--warning-text, #d97706);
-            border: 1px solid var(--warning-border, rgba(245, 158, 11, 0.2));
-            border-radius: var(--radius-full);
-            font-size: var(--text-xs);
-            font-weight: var(--font-medium);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        
-        .wallet-option {
-            transition: all 0.2s ease;
-        }
-        
-        .wallet-option:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        
-        .wallet-option:disabled,
-        .wallet-option[style*="cursor: not-allowed"] {
-            transform: none !important;
-            box-shadow: none !important;
-        }
-        
-        .wallet-status-indicator {
-            font-weight: bold;
-            font-size: 12px;
-        }
-        
-        @media (max-width: 768px) {
-            .wallet-section {
-                padding: var(--spacing-6);
-            }
-            
-            #additionalWallets .arkly-btn {
-                font-size: var(--text-sm);
-                padding: var(--spacing-3) var(--spacing-4);
-            }
-        }
-    </style>
-</head>
-<body class="app-container">
-    <!-- Header Navigation -->
-    <header class="arkly-header">
-        <nav class="arkly-nav">
-            <a href="index.html" class="arkly-logo">arkly.capital</a>
-            <div class="arkly-nav-links">
-                <a href="about.html" class="arkly-nav-link">About</a>
-                <a href="features.html" class="arkly-nav-link">Features</a>
-                <a href="insights.html" class="arkly-nav-link">Insights</a>
-                <a href="security.html" class="arkly-nav-link">Security</a>
-                <a href="contact.html" class="arkly-nav-link">Contact</a>
-                <a href="app.html" class="arkly-btn arkly-btn-primary arkly-nav-cta">Platform</a>
-            </div>
-            <button class="arkly-mobile-menu-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
-
-    <main class="app-main">
-        <div class="arkly-container">
-            <!-- Platform Header -->
-            <div style="text-align: center; margin-bottom: var(--spacing-12);">
-                <div class="arkly-badge arkly-badge-accent">Investment Platform</div>
-                <h1 style="margin: var(--spacing-4) 0;">Connect Your Wallet</h1>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
-                    Access premium real estate investments on Solana. 
-                    Connect your wallet to get started with tokenized property ownership.
-                </p>
-            </div>
-
-            <!-- Wallet Connection Section -->
-            <div class="wallet-section">
-                <div class="wallet-status">
-                    <!-- Disconnected State -->
-                    <div id="wallet-disconnected">
-                        <div style="margin-bottom: var(--spacing-6);">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
-                                <rect x="1" y="3" width="15" height="13" rx="2" ry="2"/>
-                                <path d="m22 6-7 4-7-4"/>
-                            </svg>
-                            <h3>Connect Your Solana Wallet</h3>
-                            <p style="color: var(--text-secondary); margin-top: var(--spacing-2);">
-                                Choose your preferred Solana wallet to access the platform
-                            </p>
-                        </div>
-                        
-                        <div class="wallet-actions">
-                            <button class="arkly-btn arkly-btn-primary" onclick="connectWallet('phantom')">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                    <path d="M12 2l10 6-10 6L2 8l10-6z"/>
-                                </svg>
-                                Connect Phantom
-                            </button>
-                            <button class="arkly-btn arkly-btn-secondary" onclick="connectWallet('solflare')">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <path d="M8 12l2 2 4-4"/>
-                                </svg>
-                                Connect Solflare
-                            </button>
-                            
-                            <!-- More Wallets Button -->
-                            <button id="moreWalletsBtn" class="arkly-btn arkly-btn-outline" onclick="toggleMoreWallets()" style="margin-top: var(--spacing-3);">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                    <circle cx="12" cy="12" r="1"/>
-                                    <circle cx="19" cy="12" r="1"/>
-                                    <circle cx="5" cy="12" r="1"/>
-                                </svg>
-                                More Wallets
-                            </button>
-                            
-                            <!-- Additional Wallets (Hidden by default) -->
-                            <div id="additionalWallets" style="display: none; margin-top: var(--spacing-4);">
-                                <div style="margin-bottom: var(--spacing-3); padding: var(--spacing-3); background: var(--bg-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-md);">
-                                    <p style="color: var(--text-secondary); font-size: var(--text-sm); margin: 0; text-align: center;">
-                                        Additional Solana wallets. Green checkmark (✓) indicates the wallet is installed and available.
-                                    </p>
-                                </div>
-                                
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--spacing-3);">
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('backpack')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <path d="M20 7h-4V6a4 4 0 00-8 0v1H4a1 1 0 00-1 1v11a3 3 0 003 3h12a3 3 0 003-3V8a1 1 0 00-1-1zM10 6a2 2 0 014 0v1h-4V6zm8 15H6a1 1 0 01-1-1V9h2v1a1 1 0 002 0V9h6v1a1 1 0 002 0V9h2v11a1 1 0 01-1 1z"/>
-                                            </svg>
-                                            <span>Backpack</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('glow')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <circle cx="12" cy="12" r="10"/>
-                                                <circle cx="12" cy="12" r="3"/>
-                                            </svg>
-                                            <span>Glow</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('slope')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <path d="M3 3l18 18M3 21l18-18"/>
-                                            </svg>
-                                            <span>Slope</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('torus')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <circle cx="12" cy="12" r="10"/>
-                                                <circle cx="12" cy="12" r="6"/>
-                                            </svg>
-                                            <span>Torus</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('coinbase')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <rect x="3" y="3" width="18" height="18" rx="9"/>
-                                                <rect x="8" y="8" width="8" height="8" rx="4"/>
-                                            </svg>
-                                            <span>Coinbase</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('brave')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                            <span>Brave</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('trust')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <path d="M12 1l9 4v7c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4z"/>
-                                            </svg>
-                                            <span>Trust</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('ledger')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <rect x="2" y="6" width="20" height="12" rx="4"/>
-                                                <circle cx="7" cy="12" r="2"/>
-                                                <circle cx="17" cy="12" r="2"/>
-                                            </svg>
-                                            <span>Ledger</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('exodus')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-                                                <polyline points="3.29 7 12 12 20.71 7"/>
-                                                <line x1="12" y1="22" x2="12" y2="12"/>
-                                            </svg>
-                                            <span>Exodus</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('walletconnect')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <path d="M8 12a4 4 0 104-4 4 4 0 00-4 4z"/>
-                                                <path d="M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8 4.03-8 9-8 9 3.582 9 8z"/>
-                                            </svg>
-                                            <span>WalletConnect</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('okx')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <rect x="3" y="3" width="7" height="7" rx="1"/>
-                                                <rect x="14" y="3" width="7" height="7" rx="1"/>
-                                                <rect x="3" y="14" width="7" height="7" rx="1"/>
-                                                <rect x="14" y="14" width="7" height="7" rx="1"/>
-                                            </svg>
-                                            <span>OKX</span>
-                                        </div>
-                                    </button>
-                                    
-                                    <button class="arkly-btn arkly-btn-outline wallet-option" onclick="connectWallet('math')" style="display: flex; align-items: center; justify-content: space-between;">
-                                        <div style="display: flex; align-items: center;">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-                                            </svg>
-                                            <span>Math</span>
-                                        </div>
-                                    </button>
-                                </div>
-                                
-                                <div style="margin-top: var(--spacing-4); padding: var(--spacing-3); background: var(--bg-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-md);">
-                                    <p style="color: var(--text-tertiary); font-size: var(--text-xs); margin: 0; text-align: center;">
-                                        Don't see your wallet? Most Solana wallets are compatible. Try connecting with WalletConnect or contact support.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Connected State -->
-                    <div id="wallet-connected" class="wallet-connected">
-                        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: var(--spacing-4);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--success-text, #059669); margin-right: var(--spacing-2);">
-                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                            <span style="color: var(--success-text, #059669); font-weight: var(--font-medium);">Wallet Connected</span>
-                        </div>
-                        
-                        <div class="wallet-address" id="wallet-address">
-                            <!-- Address will be populated by JavaScript -->
-                        </div>
-                        
-                        <div class="balance-display">
-                            <div class="balance-item">
-                                <div class="balance-value" id="sol-balance">0.000</div>
-                                <div class="balance-label">SOL</div>
-                            </div>
-                            <div class="balance-item">
-                                <div class="balance-value" id="usd-balance">$0.00</div>
-                                <div class="balance-label">USD Value</div>
-                            </div>
-                        </div>
-                        
-                        <button class="arkly-btn wallet-disconnect" onclick="disconnectWallet()">
-                            Disconnect Wallet
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Token Purchase Section -->
-            <div style="max-width: 800px; margin: var(--spacing-16) auto 0; text-align: center; padding: var(--spacing-12); background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%); border: 1px solid var(--border-primary); border-radius: var(--radius-xl);">
-                <div style="margin-bottom: var(--spacing-8);">
-                    <div class="arkly-badge" style="background: linear-gradient(135deg, #8b5cf6, #06b6d4); color: white; margin-bottom: var(--spacing-4);">🏠 ARKLY Token Purchase</div>
-                    <h2 style="margin-bottom: var(--spacing-4);">Buy ARKLY Tokens</h2>
-                    <p style="color: var(--text-secondary); font-size: var(--text-lg); line-height: var(--leading-relaxed); max-width: 600px; margin: 0 auto;">
-                        Purchase ARKLY tokens to access tokenized real estate investments on Solana. 
-                        Fixed price at <strong>$0.018 per ARKLY</strong>.
-                    </p>
-                </div>
-                
-                <!-- Purchase Interface -->
-                <div style="background: var(--bg-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-lg); padding: var(--spacing-8); margin-bottom: var(--spacing-8);">
-                    <!-- Current Price Display -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--spacing-6); margin-bottom: var(--spacing-8);">
-                        <div>
-                            <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--accent);">$0.018</div>
-                            <div style="color: var(--text-secondary); font-size: var(--text-sm);">Price per ARKLY</div>
-                        </div>
-                        <div>
-                            <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--accent);">$230</div>
-                            <div style="color: var(--text-secondary); font-size: var(--text-sm);">SOL Price (USD)</div>
-                        </div>
-                        <div>
-                            <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--success-text, #059669);">100M</div>
-                            <div style="color: var(--text-secondary); font-size: var(--text-sm);">Total Supply</div>
-                        </div>
-                        <div>
-                            <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--warning-text, #d97706);">∞</div>
-                            <div style="color: var(--text-secondary); font-size: var(--text-sm);">Available</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Investment Calculator -->
-                    <div style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); padding: var(--spacing-6); margin-bottom: var(--spacing-6);">
-                        <h4 style="color: var(--accent); margin-bottom: var(--spacing-4); text-align: center;">Investment Calculator</h4>
-                        
-                        <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--spacing-4); align-items: center; margin-bottom: var(--spacing-4);">
-                            <div>
-                                <label style="display: block; color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--spacing-2);">SOL Amount</label>
-                                <input type="number" id="solInput" placeholder="0.0" min="0.1" max="100" step="0.1" style="width: 100%; padding: var(--spacing-3); border: 1px solid var(--border-primary); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: var(--text-base);">
-                            </div>
-                            
-                            <div style="text-align: center; color: var(--text-tertiary);">⇄</div>
-                            
-                            <div>
-                                <label style="display: block; color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--spacing-2);">ARKLY Tokens</label>
-                                <input type="text" id="tokenOutput" readonly style="width: 100%; padding: var(--spacing-3); border: 1px solid var(--border-primary); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--accent); font-size: var(--text-base); font-weight: var(--font-medium);">
-                            </div>
-                        </div>
-                        
-                        <div style="text-align: center; margin-bottom: var(--spacing-4);">
-                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-2);">
-                                <button onclick="setAmount(1)" style="padding: var(--spacing-2); border: 1px solid var(--border-primary); border-radius: var(--radius-sm); background: var(--bg-primary); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;">1 SOL</button>
-                                <button onclick="setAmount(5)" style="padding: var(--spacing-2); border: 1px solid var(--border-primary); border-radius: var(--radius-sm); background: var(--bg-primary); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;">5 SOL</button>
-                                <button onclick="setAmount(10)" style="padding: var(--spacing-2); border: 1px solid var(--border-primary); border-radius: var(--radius-sm); background: var(--bg-primary); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;">10 SOL</button>
-                            </div>
-                        </div>
-                        
-                        <!-- Buy Now Button -->
-                        <div style="margin-top: var(--spacing-4);">
-                            <button id="buyNowBtn" class="arkly-btn arkly-btn-primary" onclick="executeBuy()" style="width: 100%; padding: var(--spacing-4); font-size: var(--text-lg); font-weight: var(--font-bold); position: relative; overflow: hidden;" disabled>
-                                <span style="position: relative; z-index: 2;">
-                                    🚀 Buy ARKLY Tokens
-                                </span>
-                                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20px 20px; animation: shimmer 2s linear infinite; opacity: 0.5;"></div>
-                            </button>
-                            <p style="color: var(--text-tertiary); font-size: var(--text-xs); text-align: center; margin-top: var(--spacing-2);">
-                                Enter SOL amount above to enable purchase
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Investment Tiers -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-4); margin-bottom: var(--spacing-6);">
-                        <div style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); padding: var(--spacing-4); text-align: center;">
-                            <div style="color: var(--accent); font-weight: var(--font-bold); margin-bottom: var(--spacing-1);">Starter</div>
-                            <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--spacing-2);">0.1 - 5 SOL</div>
-                            <div style="font-size: var(--text-xs); color: var(--text-tertiary);">Basic allocation</div>
-                        </div>
-                        <div style="background: var(--bg-secondary); border: 1px solid var(--warning-border, rgba(245, 158, 11, 0.2)); border-radius: var(--radius-md); padding: var(--spacing-4); text-align: center;">
-                            <div style="color: var(--warning-text, #d97706); font-weight: var(--font-bold); margin-bottom: var(--spacing-1);">Premium</div>
-                            <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--spacing-2);">5 - 25 SOL</div>
-                            <div style="font-size: var(--text-xs); color: var(--text-tertiary);">Enhanced benefits</div>
-                        </div>
-                        <div style="background: var(--bg-secondary); border: 1px solid var(--success-border, rgba(34, 197, 94, 0.2)); border-radius: var(--radius-md); padding: var(--spacing-4); text-align: center;">
-                            <div style="color: var(--success-text, #059669); font-weight: var(--font-bold); margin-bottom: var(--spacing-1);">Whale Tier</div>
-                            <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--spacing-2);">25 - 100 SOL</div>
-                            <div style="font-size: var(--text-xs); color: var(--text-tertiary);">VIP access & support</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Official Address -->
-                    <div style="background: var(--warning-bg, rgba(245, 158, 11, 0.1)); border: 1px solid var(--warning-border, rgba(245, 158, 11, 0.2)); border-radius: var(--radius-md); padding: var(--spacing-4); margin-bottom: var(--spacing-6);">
-                        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: var(--spacing-3);">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: var(--warning-text, #d97706); margin-right: var(--spacing-2);">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                            <span style="color: var(--warning-text, #d97706); font-weight: var(--font-medium); font-size: var(--text-sm);">Official Purchase Address</span>
-                        </div>
-                        <div style="font-family: var(--font-mono, 'Courier New', monospace); font-size: var(--text-sm); color: var(--text-primary); background: var(--bg-primary); padding: var(--spacing-3); border-radius: var(--radius-sm); border: 1px solid var(--border-primary); word-break: break-all; margin-bottom: var(--spacing-3); text-align: center;">
-                            8xK9pQf7mGvN2bR4tL5wE3sY6qA1oJ9nF2mK8vC7bX4u
-                        </div>
-                        <button class="arkly-btn arkly-btn-outline arkly-btn-sm" onclick="copyAddress()" style="width: 100%;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-1);">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
-                            </svg>
-                            Copy Address
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Benefits and Info -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-6);">
-                    <div style="text-align: left;">
-                        <h4 style="color: var(--accent); margin-bottom: var(--spacing-3);">Waitlist Benefits</h4>
-                        <ul style="color: var(--text-secondary); font-size: var(--text-sm); line-height: var(--leading-relaxed); margin: 0; padding-left: var(--spacing-4);">
-                            <li>Fixed price at $0.018 per token</li>
-                            <li>Priority access to premium properties</li>
-                            <li>Exclusive community access</li>
-                            <li>Enhanced yield opportunities (8-12% APY)</li>
-                            <li>VIP customer support & insights</li>
-                            <li>Governance voting rights</li>
-                            <li>Fee reductions on trading</li>
-                        </ul>
-                    </div>
-                    <div style="text-align: left;">
-                        <h4 style="color: var(--accent); margin-bottom: var(--spacing-3);">Key Information</h4>
-                        <ul style="color: var(--text-secondary); font-size: var(--text-sm); line-height: var(--leading-relaxed); margin: 0; padding-left: var(--spacing-4);">
-                            <li><strong>Network:</strong> Solana Mainnet</li>
-                            <li><strong>Token Standard:</strong> SPL Token</li>
-                            <li><strong>Fixed Price:</strong> $0.018 per ARKLY</li>
-                            <li><strong>Total Supply:</strong> 100M ARKLY</li>
-                            <li><strong>Minimum:</strong> 0.1 SOL (~$23)</li>
-                            <li><strong>Maximum:</strong> 100 SOL (~$23,000)</li>
-                            <li><strong>Instant delivery:</strong> No vesting</li>
-                            <li><strong>Token Type:</strong> Platform utility token</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div style="margin-top: var(--spacing-6); padding-top: var(--spacing-4); border-top: 1px solid var(--border-primary);">
-                    <p style="color: var(--text-tertiary); font-size: var(--text-xs); line-height: var(--leading-relaxed);">
-                        <strong>⚠️ Important:</strong> This is a demonstration interface. Always verify official addresses and terms before making any purchase. 
-                        For questions, contact <a href="mailto:support@arkly.capital" style="color: var(--accent);">support@arkly.capital</a>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Coming Soon Features -->
-            <div class="coming-soon">
-                <div style="text-align: center; margin-bottom: var(--spacing-8);">
-                    <h2>Platform Features</h2>
-                    <span class="status-badge">Coming Soon</span>
-                    <p style="color: var(--text-secondary); margin-top: var(--spacing-4);">
-                        We're building the future of real estate investment. Here's what's coming to the platform.
-                    </p>
-                </div>
-                
-                <div class="feature-grid">
-                    <div class="feature-item">
-                        <h3>Property Portfolio</h3>
-                        <p style="color: var(--text-secondary);">
-                            Browse and invest in curated premium real estate properties 
-                            with detailed analytics and performance metrics.
-                        </p>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <h3>Instant Trading</h3>
-                        <p style="color: var(--text-secondary);">
-                            Trade property tokens 24/7 with instant settlement and deep liquidity 
-                            through integrated DEX infrastructure.
-                        </p>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <h3>Yield Dashboard</h3>
-                        <p style="color: var(--text-secondary);">
-                            Track rental income, property appreciation, and portfolio performance 
-                            with real-time analytics and automated distributions.
-                        </p>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <h3>Risk Management</h3>
-                        <p style="color: var(--text-secondary);">
-                            Advanced portfolio tools with diversification analytics, risk scoring, 
-                            and automated rebalancing strategies.
-                        </p>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: var(--spacing-8);">
-                    <p style="color: var(--text-tertiary); font-size: var(--text-sm);">
-                        Want to Join Waitlist? Contact us at 
-                        <a href="mailto:platform@arkly.capital" style="color: var(--accent);">platform@arkly.capital</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="arkly-footer">
-        <div class="arkly-container">
-            <div class="arkly-footer-content">
-                <div class="arkly-footer-section">
-                    <h4>arkly.capital</h4>
-                    <p>Premium real estate investment platform built on Solana blockchain infrastructure.</p>
-                </div>
-                
-                <div class="arkly-footer-section">
-                    <h4>Platform</h4>
-                    <ul>
-                        <li><a href="app.html">Investment App</a></li>
-                        <li><a href="#" style="opacity: 0.5;">Portfolio (Coming Soon)</a></li>
-                        <li><a href="#" style="opacity: 0.5;">Trading (Coming Soon)</a></li>
-                        <li><a href="security.html">Security</a></li>
-                    </ul>
-                </div>
-                
-                <div class="arkly-footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="insights.html">Insights</a></li>
-                        <li><a href="legal.html">Legal</a></li>
-                        <li><a href="privacy.html">Privacy</a></li>
-                        <li><a href="terms.html">Terms</a></li>
-                    </ul>
-                </div>
-                
-                <div class="arkly-footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="contact.html">General Inquiries</a></li>
-                        <li><a href="mailto:platform@arkly.capital">Platform Support</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="arkly-footer-bottom">
-                <p>&copy; 2025 arkly.capital. All rights reserved.</p>
-                <p>Securities offered through licensed broker-dealers. Past performance does not guarantee future results.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script>
-        // Simple wallet connection simulation
-        let isWalletConnected = false;
-        let walletAddress = '';
-        let moreWalletsVisible = false;
-        
-        // Fixed price parameters - simplified from bonding curve
-        const tokenPrice = 0.018; // Fixed price of $0.018 per ARKLY token
-        const solPrice = 230; // SOL price in USD
-        
-        function calculateTokensFromSOL(solAmount) {
-            const usdValue = solAmount * solPrice; // Convert SOL to USD
-            return Math.floor(usdValue / tokenPrice); // Calculate tokens at fixed price
-        }
-        
-        function updateCalculator() {
-            const solInput = document.getElementById('solInput');
-            const tokenOutput = document.getElementById('tokenOutput');
-            const buyBtn = document.getElementById('buyNowBtn');
-            
-            const solAmount = parseFloat(solInput.value) || 0;
-            
-            if (solAmount > 0) {
-                const tokens = calculateTokensFromSOL(solAmount);
-                tokenOutput.value = `${tokens.toLocaleString()} ARKLY`;
-                
-                // Enable buy button
-                if (solAmount >= 0.1 && solAmount <= 100) {
-                    buyBtn.disabled = false;
-                    buyBtn.classList.add('buy-btn-enabled');
-                    buyBtn.innerHTML = `
-                        <span style="position: relative; z-index: 2;">
-                            🚀 Buy ${tokens.toLocaleString()} ARKLY for ${solAmount} SOL
-                        </span>
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20px 20px; animation: shimmer 2s linear infinite; opacity: 0.5;"></div>
-                    `;
-                } else {
-                    buyBtn.disabled = true;
-                    buyBtn.classList.remove('buy-btn-enabled');
-                    buyBtn.innerHTML = `
-                        <span style="position: relative; z-index: 2;">
-                            🚀 Buy ARKLY Tokens
-                        </span>
-                    `;
-                }
-            } else {
-                tokenOutput.value = '';
-                buyBtn.disabled = true;
-                buyBtn.classList.remove('buy-btn-enabled');
-                buyBtn.innerHTML = `
-                    <span style="position: relative; z-index: 2;">
-                        🚀 Buy ARKLY Tokens
-                    </span>
-                `;
-            }
-        }
-        
-        function setAmount(amount) {
-            document.getElementById('solInput').value = amount;
-            updateCalculator();
-        }
-        
-        // Execute buy transaction with wallet
-        async function executeBuy() {
-            const solInput = document.getElementById('solInput');
-            const solAmount = parseFloat(solInput.value) || 0;
-            
-            if (!isWalletConnected) {
-                showNotification('Please connect your wallet first!', 'warning');
-                return;
-            }
-            
-            if (solAmount < 0.1) {
-                showNotification('Minimum purchase is 0.1 SOL', 'error');
-                return;
-            }
-            
-            if (solAmount > 100) {
-                showNotification('Maximum purchase is 100 SOL per wallet', 'error');
-                return;
-            }
-            
-            // Calculate tokens and USD value for confirmation
-            const tokens = calculateTokensFromSOL(solAmount);
-            const usdValue = solAmount * solPrice;
-            
-            const confirmed = confirm(`
-Confirm Purchase:
-• Amount: ${solAmount} SOL (~$${usdValue.toFixed(2)})
-• You will receive: ${tokens.toLocaleString()} ARKLY tokens
-• Price: $${tokenPrice} per ARKLY (fixed price)
-• Transaction will be sent to your connected wallet for approval
-            `);
-            
-            if (confirmed) {
-                try {
-                    // Send real transaction
-                    showNotification('🚀 Creating transaction...', 'info');
-                    const signature = await createAndSendTransaction(solAmount);
-                    
-                    showNotification(`✅ Purchase successful! Transaction: ${signature.slice(0, 8)}...${signature.slice(-8)}`, 'success');
-                    
-                    // Clear inputs and refresh balance
-                    solInput.value = '';
-                    updateCalculator();
-                    
-                    // Refresh balance after transaction
-                    setTimeout(() => {
-                        fetchRealBalance();
-                    }, 3000);
-                    
-                } catch (error) {
-                    console.error('Transaction failed:', error);
-                    showNotification(`Transaction failed: ${error.message}`, 'error');
-                }
-            }
-        }
-        
-        // Wallet availability mapping - improved detection
-        const walletDetectors = {
-            phantom: () => window.solana && window.solana.isPhantom,
-            solflare: () => window.solflare && window.solflare.isSolflare,
-            backpack: () => window.backpack && window.backpack.isBackpack,
-            glow: () => window.glow && typeof window.glow.connect === 'function',
-            slope: () => window.Slope && typeof window.Slope.connect === 'function',
-            torus: () => window.torus && typeof window.torus.connect === 'function',
-            coinbase: () => window.coinbaseSolana && window.coinbaseSolana.isCoinbaseWallet,
-            brave: () => window.braveSolana && window.braveSolana.isBrave,
-            trust: () => window.trustWallet && window.trustWallet.solana,
-            ledger: () => window.solana && window.solana.isLedger,
-            exodus: () => window.exodus && window.exodus.solana,
-            walletconnect: () => window.walletConnect && typeof window.walletConnect.connect === 'function',
-            okx: () => window.okxwallet && window.okxwallet.solana,
-            math: () => window.solana && window.solana.isMathWallet
-        };
-        
-        function toggleMoreWallets() {
-            const additionalWallets = document.getElementById('additionalWallets');
-            const moreWalletsBtn = document.getElementById('moreWalletsBtn');
-            
-            moreWalletsVisible = !moreWalletsVisible;
-            
-            if (moreWalletsVisible) {
-                additionalWallets.style.display = 'block';
-                moreWalletsBtn.innerHTML = `
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                        <path d="M18 6L6 18M6 6l12 12"/>
-                    </svg>
-                    Hide Wallets
-                `;
-                
-                // Update wallet availability status
-                updateWalletAvailability();
-            } else {
-                additionalWallets.style.display = 'none';
-                moreWalletsBtn.innerHTML = `
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                        <circle cx="12" cy="12" r="1"/>
-                        <circle cx="19" cy="12" r="1"/>
-                        <circle cx="5" cy="12" r="1"/>
-                    </svg>
-                    More Wallets
-                `;
-            }
-        }
-        
-        function updateWalletAvailability() {
-            const walletButtons = document.querySelectorAll('#additionalWallets button[onclick^="connectWallet"]');
-            
-            walletButtons.forEach(button => {
-                const onclickAttr = button.getAttribute('onclick');
-                const walletType = onclickAttr.match(/connectWallet\('(\w+)'\)/)[1];
-                
-                if (walletDetectors[walletType] && walletDetectors[walletType]()) {
-                    // Wallet is available
-                    button.style.opacity = '1';
-                    button.style.cursor = 'pointer';
-                    button.disabled = false;
-                    
-                    // Add available indicator
-                    if (!button.querySelector('.wallet-status-indicator')) {
-                        const indicator = document.createElement('span');
-                        indicator.className = 'wallet-status-indicator';
-                        indicator.innerHTML = ' ✓';
-                        indicator.style.color = '#059669';
-                        indicator.style.fontSize = '12px';
-                        indicator.style.marginLeft = 'auto';
-                        button.appendChild(indicator);
-                    }
-                } else {
-                    // Wallet is not available
-                    button.style.opacity = '0.5';
-                    button.style.cursor = 'not-allowed';
-                    
-                    // Update onclick to show not available message
-                    const originalOnclick = button.getAttribute('onclick');
-                    button.setAttribute('data-original-onclick', originalOnclick);
-                    button.setAttribute('onclick', `showWalletNotAvailable('${walletType}')`);
-                    
-                    // Add not available indicator
-                    if (!button.querySelector('.wallet-status-indicator')) {
-                        const indicator = document.createElement('span');
-                        indicator.className = 'wallet-status-indicator';
-                        indicator.innerHTML = ' ✗';
-                        indicator.style.color = '#ef4444';
-                        indicator.style.fontSize = '12px';
-                        indicator.style.marginLeft = 'auto';
-                        button.appendChild(indicator);
-                    }
-                }
-            });
-        }
-        
-        function showWalletNotAvailable(walletType) {
-            const walletNames = {
-                backpack: 'Backpack',
-                glow: 'Glow',
-                slope: 'Slope',
-                torus: 'Torus',
-                coinbase: 'Coinbase Wallet',
-                brave: 'Brave Wallet',
-                trust: 'Trust Wallet',
-                ledger: 'Ledger',
-                exodus: 'Exodus',
-                walletconnect: 'WalletConnect',
-                okx: 'OKX Wallet',
-                math: 'Math Wallet'
-            };
-            
-            const walletName = walletNames[walletType] || walletType;
-            
-            showNotification(
-                `${walletName} is not detected. Please install the wallet extension or check if it's enabled.`,
-                'warning'
-            );
-        }
-        
-        // Store connected wallet provider globally
-        let connectedWalletProvider = null;
-        let connectedWalletType = null;
-        
-        async function connectWallet(walletType) {
-            try {
-                console.log(`Attempting to connect ${walletType} wallet...`);
-                showNotification('Connecting to wallet...', 'info');
-                
-                let walletProvider = null;
-                let publicKey = null;
-                
-                // Get the appropriate wallet provider
-                if (walletType === 'phantom' && window.solana && window.solana.isPhantom) {
-                    walletProvider = window.solana;
-                    const response = await walletProvider.connect();
-                    publicKey = response.publicKey.toString();
-                } else if (walletType === 'solflare' && window.solflare && window.solflare.isSolflare) {
-                    walletProvider = window.solflare;
-                    const response = await walletProvider.connect();
-                    publicKey = response.publicKey.toString();
-                } else if (walletType === 'backpack' && window.backpack && window.backpack.isBackpack) {
-                    walletProvider = window.backpack;
-                    const response = await walletProvider.connect();
-                    publicKey = response.publicKey.toString();
-                } else if (walletType === 'glow' && window.glow) {
-                    walletProvider = window.glow;
-                    const response = await walletProvider.connect();
-                    publicKey = response.publicKey ? response.publicKey.toString() : response.address;
-                } else if (walletType === 'slope' && window.Slope) {
-                    walletProvider = window.Slope;
-                    const response = await walletProvider.connect();
-                    publicKey = response.data ? response.data.publicKey : response.publicKey;
-                } else if (walletType === 'coinbase' && window.coinbaseSolana) {
-                    walletProvider = window.coinbaseSolana;
-                    const response = await walletProvider.connect();
-                    publicKey = response.publicKey.toString();
-                } else if (walletType === 'okx' && window.okxwallet && window.okxwallet.solana) {
-                    walletProvider = window.okxwallet.solana;
-                    const response = await walletProvider.connect();
-                    publicKey = response.publicKey.toString();
-                } else if (walletType === 'torus' && window.torus) {
-                    walletProvider = window.torus;
-                    const response = await walletProvider.connect();
-                    publicKey = response.publicKey ? response.publicKey.toString() : response.address;
-                } else if (walletType === 'exodus' && window.exodus && window.exodus.solana) {
-                    walletProvider = window.exodus.solana;
-                    const response = await walletProvider.connect();
-                    publicKey = response.publicKey.toString();
-                } else if (walletType === 'brave' && window.braveSolana) {
-                    walletProvider = window.braveSolana;
-                    const response = await walletProvider.connect();
-                    publicKey = response.publicKey.toString();
-                } else if (walletType === 'trust' && window.trustWallet && window.trustWallet.solana) {
-                    walletProvider = window.trustWallet.solana;
-                    const response = await walletProvider.connect();
-                    publicKey = response.publicKey.toString();
-                } else {
-                    throw new Error(`${walletType} wallet not found. Please install the wallet extension.`);
-                }
-                
-                // Store wallet info
-                walletAddress = publicKey;
-                connectedWalletProvider = walletProvider;
-                connectedWalletType = walletType;
-                isWalletConnected = true;
-                
-                const walletNames = {
-                    phantom: 'Phantom',
-                    solflare: 'Solflare',
-                    backpack: 'Backpack',
-                    glow: 'Glow',
-                    slope: 'Slope',
-                    torus: 'Torus',
-                    coinbase: 'Coinbase Wallet',
-                    brave: 'Brave Wallet',
-                    trust: 'Trust Wallet',
-                    ledger: 'Ledger',
-                    exodus: 'Exodus',
-                    walletconnect: 'WalletConnect',
-                    okx: 'OKX Wallet',
-                    math: 'Math Wallet'
-                };
-                
-                showNotification(`${walletNames[walletType]} connected successfully!`, 'success');
-                
-                // Update UI and fetch real balance
-                updateWalletUI();
-                await fetchRealBalance();
-                
-            } catch (error) {
-                console.error('Wallet connection failed:', error);
-                
-                // Handle specific error cases
-                if (error.code === 4001 || error.message.includes('User rejected')) {
-                    showNotification('Wallet connection cancelled by user', 'warning');
-                } else if (error.message.includes('not found') || error.message.includes('install')) {
-                    showNotification(`${error.message}`, 'error');
-                } else {
-                    showNotification(`Failed to connect: ${error.message}`, 'error');
-                }
-                
-                // Reset connection state
-                isWalletConnected = false;
-                connectedWalletProvider = null;
-                connectedWalletType = null;
-                walletAddress = '';
-                updateWalletUI();
-            }
-        }
-        
-        function disconnectWallet() {
-            const previousWalletType = connectedWalletType;
-            
-            // Reset connection state first
-            isWalletConnected = false;
-            walletAddress = '';
-            connectedWalletProvider = null;
-            connectedWalletType = null;
-            
-            // Update UI immediately
-            updateWalletUI();
-            
-            // Try to disconnect from the actual wallet
-            try {
-                if (previousWalletType === 'phantom' && window.solana && window.solana.isConnected) {
-                    window.solana.disconnect();
-                } else if (previousWalletType === 'solflare' && window.solflare && window.solflare.isConnected) {
-                    window.solflare.disconnect();
-                } else if (previousWalletType === 'backpack' && window.backpack && window.backpack.isConnected) {
-                    window.backpack.disconnect();
-                } else if (previousWalletType === 'glow' && window.glow && window.glow.disconnect) {
-                    window.glow.disconnect();
-                } else if (previousWalletType === 'slope' && window.Slope && window.Slope.disconnect) {
-                    window.Slope.disconnect();
-                } else if (previousWalletType === 'coinbase' && window.coinbaseSolana && window.coinbaseSolana.isConnected) {
-                    window.coinbaseSolana.disconnect();
-                } else if (previousWalletType === 'okx' && window.okxwallet && window.okxwallet.solana && window.okxwallet.solana.disconnect) {
-                    window.okxwallet.solana.disconnect();
-                } else if (previousWalletType === 'torus' && window.torus && window.torus.disconnect) {
-                    window.torus.disconnect();
-                } else if (previousWalletType === 'exodus' && window.exodus && window.exodus.solana && window.exodus.solana.disconnect) {
-                    window.exodus.solana.disconnect();
-                } else if (previousWalletType === 'brave' && window.braveSolana && window.braveSolana.disconnect) {
-                    window.braveSolana.disconnect();
-                } else if (previousWalletType === 'trust' && window.trustWallet && window.trustWallet.solana && window.trustWallet.solana.disconnect) {
-                    window.trustWallet.solana.disconnect();
-                }
-                
-                showNotification('Wallet disconnected successfully', 'info');
-            } catch (error) {
-                console.error('Error disconnecting wallet:', error);
-                showNotification('Wallet disconnected', 'info');
-            }
-        }
-        
-        function updateWalletUI() {
-            const disconnectedEl = document.getElementById('wallet-disconnected');
-            const connectedEl = document.getElementById('wallet-connected');
-            const addressEl = document.getElementById('wallet-address');
-            
-            if (isWalletConnected) {
-                disconnectedEl.style.display = 'none';
-                connectedEl.style.display = 'block';
-                addressEl.textContent = walletAddress;
-            } else {
-                disconnectedEl.style.display = 'block';
-                connectedEl.style.display = 'none';
-            }
-        }
-        
-        // Fetch real wallet balance using Solana RPC
-        async function fetchRealBalance() {
-            if (!connectedWalletProvider || !walletAddress) {
-                console.log('No wallet connected');
-                return;
-            }
-            
-            try {
-                console.log('Fetching balance for:', walletAddress);
-                showNotification('Fetching wallet balance...', 'info');
-                
-                // Use public Solana RPC endpoint
-                const response = await fetch('https://api.mainnet-beta.solana.com', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        jsonrpc: '2.0',
-                        id: 1,
-                        method: 'getBalance',
-                        params: [walletAddress]
-                    })
-                });
-                
-                const data = await response.json();
-                
-                if (data.result) {
-                    // Convert lamports to SOL (1 SOL = 1,000,000,000 lamports)
-                    const lamports = data.result.value;
-                    const solBalance = lamports / 1_000_000_000;
-                    const usdValue = solBalance * solPrice; // Using current SOL price
-                    
-                    // Update balance display
-                    const solBalanceEl = document.getElementById('sol-balance');
-                    const usdBalanceEl = document.getElementById('usd-balance');
-                    
-                    if (solBalanceEl && usdBalanceEl) {
-                        solBalanceEl.textContent = solBalance.toFixed(3);
-                        usdBalanceEl.textContent = `$${usdValue.toFixed(2)}`;
-                    }
-                    
-                    console.log(`Balance: ${solBalance} SOL ($${usdValue.toFixed(2)})`);
-                    showNotification(`Balance loaded: ${solBalance.toFixed(3)} SOL`, 'success');
-                } else {
-                    throw new Error('Failed to fetch balance from RPC');
-                }
-                
-            } catch (error) {
-                console.error('Error fetching balance:', error);
-                showNotification('Error fetching balance, using demo values', 'warning');
-                
-                // Fallback to demo values
-                const solBalanceEl = document.getElementById('sol-balance');
-                const usdBalanceEl = document.getElementById('usd-balance');
-                
-                if (solBalanceEl && usdBalanceEl) {
-                    solBalanceEl.textContent = '2.150';
-                    usdBalanceEl.textContent = '$494.50';
-                }
-            }
-        }
-        
-        // Create and send a real transaction
-        async function createAndSendTransaction(solAmount) {
-            if (!connectedWalletProvider || !walletAddress) {
-                throw new Error('No wallet connected');
-            }
-            
-            try {
-                console.log(`Creating transaction for ${solAmount} SOL`);
-                showNotification('Creating transaction...', 'info');
-                
-                // Convert SOL to lamports
-                const lamports = Math.floor(solAmount * 1_000_000_000);
-                
-                // Destination address (presale address)
-                const destinationAddress = '8xK9pQf7mGvN2bR4tL5wE3sY6qA1oJ9nF2mK8vC7bX4u';
-                
-                console.log('Transaction created, requesting signature...');
-                showNotification('Please approve the transaction in your wallet', 'info');
-                
-                // Create a simple transfer using the wallet's built-in methods
-                let signature;
-                
-                if (connectedWalletType === 'phantom' && window.solana && window.solana.isPhantom) {
-                    // For Phantom, use the Web3.js library
-                    const { Connection, PublicKey, Transaction, SystemProgram } = window.solanaWeb3;
-                    
-                    const connection = new Connection('https://api.mainnet-beta.solana.com');
-                    const fromPubkey = new PublicKey(walletAddress);
-                    const toPubkey = new PublicKey(destinationAddress);
-                    
-                    const transaction = new Transaction().add(
-                        SystemProgram.transfer({
-                            fromPubkey: fromPubkey,
-                            toPubkey: toPubkey,
-                            lamports: lamports,
-                        })
-                    );
-                    
-                    const { blockhash } = await connection.getLatestBlockhash();
-                    transaction.recentBlockhash = blockhash;
-                    transaction.feePayer = fromPubkey;
-                    
-                    const signed = await window.solana.signAndSendTransaction(transaction);
-                    signature = signed.signature;
-                    
-                } else if (connectedWalletType === 'solflare' && window.solflare) {
-                    // For Solflare, try to use Web3.js if available, otherwise fallback
-                    if (window.solanaWeb3) {
-                        const { Connection, PublicKey, Transaction, SystemProgram } = window.solanaWeb3;
-                        
-                        const connection = new Connection('https://api.mainnet-beta.solana.com');
-                        const fromPubkey = new PublicKey(walletAddress);
-                        const toPubkey = new PublicKey(destinationAddress);
-                        
-                        const transaction = new Transaction().add(
-                            SystemProgram.transfer({
-                                fromPubkey: fromPubkey,
-                                toPubkey: toPubkey,
-                                lamports: lamports,
-                            })
-                        );
-                        
-                        const { blockhash } = await connection.getLatestBlockhash();
-                        transaction.recentBlockhash = blockhash;
-                        transaction.feePayer = fromPubkey;
-                        
-                        const signed = await window.solflare.signAndSendTransaction(transaction);
-                        signature = signed.signature;
-                    } else {
-                        // Fallback for Solflare without Web3.js
-                        const result = await window.solflare.signAndSendTransaction({
-                            message: `Transfer ${solAmount} SOL to presale`,
-                            to: destinationAddress,
-                            amount: lamports
-                        });
-                        signature = result.signature;
-                    }
-                    
-                } else if (connectedWalletType === 'backpack' && window.backpack) {
-                    // For Backpack
-                    if (window.solanaWeb3) {
-                        const { Connection, PublicKey, Transaction, SystemProgram } = window.solanaWeb3;
-                        
-                        const connection = new Connection('https://api.mainnet-beta.solana.com');
-                        const fromPubkey = new PublicKey(walletAddress);
-                        const toPubkey = new PublicKey(destinationAddress);
-                        
-                        const transaction = new Transaction().add(
-                            SystemProgram.transfer({
-                                fromPubkey: fromPubkey,
-                                toPubkey: toPubkey,
-                                lamports: lamports,
-                            })
-                        );
-                        
-                        const { blockhash } = await connection.getLatestBlockhash();
-                        transaction.recentBlockhash = blockhash;
-                        transaction.feePayer = fromPubkey;
-                        
-                        const signed = await window.backpack.signAndSendTransaction(transaction);
-                        signature = signed.signature;
-                    }
-                } else {
-                    // Generic approach for other wallets - create a simple transaction object
-                    const transactionData = {
-                        type: 'transfer',
-                        amount: lamports,
-                        recipient: destinationAddress,
-                        memo: 'ARKLY Token Purchase'
-                    };
-                    
-                    const result = await connectedWalletProvider.signAndSendTransaction(transactionData);
-                    signature = result.signature || result;
-                }
-                
-                console.log('Transaction sent:', signature);
-                showNotification(`Transaction sent! Signature: ${signature.slice(0, 8)}...`, 'success');
-                
-                return signature;
-                
-            } catch (error) {
-                console.error('Transaction failed:', error);
-                
-                // Handle user rejection
-                if (error.message.includes('User rejected') || error.code === 4001 || error.code === -32603) {
-                    throw new Error('Transaction cancelled by user');
-                } else if (error.message.includes('Insufficient funds') || error.message.includes('insufficient lamports')) {
-                    throw new Error('Insufficient SOL balance');
-                } else {
-                    throw new Error(`Transaction failed: ${error.message}`);
-                }
-            }
-        }
-        
-        function generateDemoAddress(walletType = 'default') {
-            // Generate a unique demo Solana address for each wallet type
-            const walletSeeds = {
-                phantom: 'Ph4nt0mW4ll3tD3m0Addr3ss',
-                solflare: 'S0lfl4r3W4ll3tD3m0Addr3ss',
-                backpack: 'B4ckp4ckW4ll3tD3m0Addr3ss',
-                glow: 'Gl0wW4ll3tD3m0Addr3ssS33d',
-                slope: 'Sl0p3W4ll3tD3m0Addr3ssS33d',
-                torus: 'T0rusW4ll3tD3m0Addr3ssS33d',
-                coinbase: 'C01nb4s3W4ll3tD3m0Addr3ss',
-                brave: 'Br4v3W4ll3tD3m0Addr3ssS33d',
-                trust: 'TrustW4ll3tD3m0Addr3ssS33d',
-                ledger: 'L3dg3rW4ll3tD3m0Addr3ssS3',
-                exodus: 'Ex0dusW4ll3tD3m0Addr3ssS3',
-                walletconnect: 'W4ll3tC0nn3ctD3m0Addr3ss',
-                okx: 'OKXWall3tD3m0Addr3ssS33d01',
-                math: 'M4thW4ll3tD3m0Addr3ssS33d',
-                default: 'D3f4ultW4ll3tD3m0Addr3ss'
-            };
-            
-            const seed = walletSeeds[walletType] || walletSeeds.default;
-            const chars = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
-            let result = '';
-            
-            // Use the seed to generate a consistent address for each wallet type
-            for (let i = 0; i < 44; i++) {
-                const charIndex = (seed.charCodeAt(i % seed.length) + i) % chars.length;
-                result += chars.charAt(charIndex);
-            }
-            
-            return result;
-        }
-        
-        // Copy address function
-        function copyAddress() {
-            const address = '8xK9pQf7mGvN2bR4tL5wE3sY6qA1oJ9nF2mK8vC7bX4u';
-            
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(address).then(() => {
-                    showNotification('Address copied to clipboard!', 'success');
-                }).catch(() => {
-                    fallbackCopyTextToClipboard(address);
-                });
-            } else {
-                fallbackCopyTextToClipboard(address);
-            }
-        }
-        
-        function fallbackCopyTextToClipboard(text) {
-            const textArea = document.createElement('textarea');
-            textArea.value = text;
-            textArea.style.position = 'fixed';
-            textArea.style.left = '-999999px';
-            textArea.style.top = '-999999px';
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-            
-            try {
-                document.execCommand('copy');
-                showNotification('Address copied to clipboard!', 'success');
-            } catch (err) {
-                showNotification('Failed to copy address. Please copy manually.', 'error');
-            }
-            
-            document.body.removeChild(textArea);
-        }
-        
-        function showNotification(message, type = 'info') {
-            // Create notification element
-            const notification = document.createElement('div');
-            notification.className = `notification notification-${type}`;
-            notification.textContent = message;
-            
-            // Style the notification
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                z-index: 10000;
-                padding: 16px 24px;
-                border-radius: 8px;
-                color: white;
-                font-weight: 500;
-                max-width: 400px;
-                word-wrap: break-word;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-                opacity: 0;
-                transform: translateX(100%);
-                transition: all 0.3s ease-in-out;
-            `;
-            
-            // Set background color based on type
-            switch (type) {
-                case 'success':
-                    notification.style.background = 'linear-gradient(135deg, #059669, #065f46)';
-                    break;
-                case 'error':
-                    notification.style.background = 'linear-gradient(135deg, #dc2626, #991b1b)';
-                    break;
-                case 'warning':
-                    notification.style.background = 'linear-gradient(135deg, #d97706, #92400e)';
-                    break;
-                default:
-                    notification.style.background = 'linear-gradient(135deg, #0ea5e9, #0284c7)';
-            }
-            
-            // Add to DOM
-            document.body.appendChild(notification);
-            
-            // Animate in
-            setTimeout(() => {
-                notification.style.opacity = '1';
-                notification.style.transform = 'translateX(0)';
-            }, 100);
-            
-            // Remove after 4 seconds
-            setTimeout(() => {
-                notification.style.opacity = '0';
-                notification.style.transform = 'translateX(100%)';
-                setTimeout(() => {
-                    if (notification.parentNode) {
-                        notification.parentNode.removeChild(notification);
-                    }
-                }, 300);
-            }, 4000);
-        }
-        
-        // Initialize wallet state on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            updateWalletUI();
-            
-            // Add event listeners for calculator
-            const solInput = document.getElementById('solInput');
-            if (solInput) {
-                solInput.addEventListener('input', updateCalculator);
-                solInput.addEventListener('keyup', updateCalculator);
-            }
-            
-            // Check if any wallet is already connected
-            setTimeout(async () => {
-                try {
-                    if (window.solana && window.solana.isConnected && window.solana.publicKey) {
-                        console.log('Phantom wallet already connected');
-                        walletAddress = window.solana.publicKey.toString();
-                        connectedWalletProvider = window.solana;
-                        connectedWalletType = 'phantom';
-                        isWalletConnected = true;
-                        updateWalletUI();
-                        await fetchRealBalance();
-                        showNotification('Phantom wallet reconnected', 'success');
-                    } else if (window.solflare && window.solflare.isConnected && window.solflare.publicKey) {
-                        console.log('Solflare wallet already connected');
-                        walletAddress = window.solflare.publicKey.toString();
-                        connectedWalletProvider = window.solflare;
-                        connectedWalletType = 'solflare';
-                        isWalletConnected = true;
-                        updateWalletUI();
-                        await fetchRealBalance();
-                        showNotification('Solflare wallet reconnected', 'success');
-                    } else if (window.backpack && window.backpack.isConnected && window.backpack.publicKey) {
-                        console.log('Backpack wallet already connected');
-                        walletAddress = window.backpack.publicKey.toString();
-                        connectedWalletProvider = window.backpack;
-                        connectedWalletType = 'backpack';
-                        isWalletConnected = true;
-                        updateWalletUI();
-                        await fetchRealBalance();
-                        showNotification('Backpack wallet reconnected', 'success');
-                    }
-                } catch (error) {
-                    console.log('No wallet auto-connected:', error);
-                }
-                
-                // Initial check for wallet availability (for visual feedback)
-                if (moreWalletsVisible) {
-                    updateWalletAvailability();
-                }
             }, 1000);
         });
     </script>
