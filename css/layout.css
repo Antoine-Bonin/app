@@ -1,0 +1,393 @@
+/* Layout - Structure générale et conteneurs premium */
+
+/* Container principal premium */
+.arkly-container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
+    position: relative;
+}
+
+/* Bordure subtile pour conteneurs premium */
+.arkly-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: var(--spacing-4);
+    right: var(--spacing-4);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+    opacity: 0;
+    transition: var(--transition-slow);
+}
+
+@media (min-width: 640px) {
+    .arkly-container {
+        padding: 0 var(--spacing-6);
+    }
+    
+    .arkly-container::before {
+        left: var(--spacing-6);
+        right: var(--spacing-6);
+    }
+}
+
+@media (min-width: 1024px) {
+    .arkly-container {
+        padding: 0 var(--spacing-8);
+    }
+    
+    .arkly-container::before {
+        left: var(--spacing-8);
+        right: var(--spacing-8);
+    }
+}
+
+/* Grid système */
+.arkly-grid {
+    display: grid;
+    gap: var(--spacing-6);
+}
+
+.arkly-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.arkly-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.arkly-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.arkly-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Flexbox utilitaires */
+.arkly-flex {
+    display: flex;
+}
+
+.arkly-flex-col {
+    flex-direction: column;
+}
+
+.arkly-items-center {
+    align-items: center;
+}
+
+.arkly-items-start {
+    align-items: flex-start;
+}
+
+.arkly-items-end {
+    align-items: flex-end;
+}
+
+.arkly-justify-center {
+    justify-content: center;
+}
+
+.arkly-justify-between {
+    justify-content: space-between;
+}
+
+.arkly-justify-start {
+    justify-content: flex-start;
+}
+
+.arkly-justify-end {
+    justify-content: flex-end;
+}
+
+/* Header layout premium */
+.arkly-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background: rgba(248, 250, 252, 0.85);  /* Plus sophistiqué */
+    backdrop-filter: blur(20px);             /* Plus intense */
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: var(--z-fixed);
+    transition: var(--transition-all);
+    box-shadow: var(--shadow-xs);
+}
+
+/* Header avec scroll - effet premium */
+.arkly-header.scrolled {
+    background: rgba(248, 250, 252, 0.95);
+    border-bottom-color: var(--border-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.arkly-nav {
+    height: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+@media (min-width: 640px) {
+    .arkly-nav {
+        padding: 0 var(--spacing-6);
+    }
+}
+
+@media (min-width: 1024px) {
+    .arkly-nav {
+        padding: 0 var(--spacing-8);
+    }
+}
+
+/* Navigation links */
+.arkly-nav-links {
+    display: none;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+    .arkly-nav-links {
+        display: flex;
+    }
+}
+
+/* Main content offset pour header fixe */
+main {
+    padding-top: var(--header-height);
+}
+
+/* Sections layout */
+section {
+    padding: var(--spacing-16) 0;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: var(--spacing-20) 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    section {
+        padding: var(--spacing-24) 0;
+    }
+}
+
+/* Hero section layout */
+.arkly-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-20) 0;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-primary);
+}
+
+.arkly-hero-content {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+@media (min-width: 640px) {
+    .arkly-hero-content {
+        padding: 0 var(--spacing-6);
+    }
+}
+
+@media (min-width: 1024px) {
+    .arkly-hero-content {
+        padding: 0 var(--spacing-8);
+    }
+}
+
+/* Features section layout */
+.arkly-features {
+    background: var(--bg-primary) !important;
+    padding: var(--spacing-16) 0;
+}
+
+.arkly-features-header {
+    text-align: center;
+    margin-bottom: var(--spacing-16);
+}
+
+.arkly-features-grid {
+    display: grid;
+    gap: var(--spacing-8);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .arkly-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .arkly-features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-6);
+    }
+}
+
+/* Stats section layout */
+.arkly-stats {
+    background: var(--bg-dark);
+    color: var(--text-inverse);
+}
+
+.arkly-stats-grid {
+    display: grid;
+    gap: var(--spacing-8);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+    .arkly-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-12);
+    }
+}
+
+/* CTA section layout */
+.arkly-cta-section {
+    background: var(--bg-tertiary);
+}
+
+.arkly-cta-content {
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.arkly-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-8);
+}
+
+@media (min-width: 640px) {
+    .arkly-cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-6);
+    }
+}
+
+/* Footer layout */
+.arkly-footer {
+    background: var(--bg-dark);
+    color: var(--text-inverse);
+    padding: var(--spacing-16) 0 var(--spacing-8);
+}
+
+.arkly-footer-content {
+    display: grid;
+    gap: var(--spacing-8);
+    grid-template-columns: 1fr;
+    margin-bottom: var(--spacing-12);
+}
+
+@media (min-width: 640px) {
+    .arkly-footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .arkly-footer-content {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: var(--spacing-12);
+    }
+}
+
+.arkly-footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    padding-top: var(--spacing-8);
+    border-top: 1px solid var(--gray-800);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .arkly-footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+}
+
+.arkly-footer-links {
+    display: flex;
+    gap: var(--spacing-6);
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .arkly-footer-links {
+        justify-content: flex-end;
+    }
+}
+
+/* Utilitaires de layout */
+.arkly-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.arkly-hidden {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .arkly-sm-block {
+        display: block;
+    }
+    .arkly-sm-hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .arkly-md-block {
+        display: block;
+    }
+    .arkly-md-hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .arkly-lg-block {
+        display: block;
+    }
+    .arkly-lg-hidden {
+        display: none;
+    }
+}

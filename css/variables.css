@@ -1,0 +1,198 @@
+/* Variables CSS - Système de design premium */
+:root {
+    /* Couleurs principales - Palette tech premium */
+    --primary: #000000;
+    --primary-hover: #1a1a1a;
+    --primary-light: #333333;
+    --secondary: #ffffff;
+    --secondary-hover: #f8fafc;
+    
+    /* Couleurs d'accent - Noir et blanc clean */
+    --accent: #000000;          /* Noir pour les accents */
+    --accent-hover: #1a1a1a;
+    --accent-light: #f8fafc;
+    --accent-muted: #64748b;    /* Gris neutre */
+    
+    /* Couleurs d'élégance premium */
+    --platinum: #e5e7eb;        /* Platine subtil */
+    --silver: #9ca3af;          /* Argent sophistiqué */
+    --charcoal: #374151;        /* Charbon élégant */
+    --midnight: #111827;        /* Minuit premium */
+    
+    /* Nuances de gris premium - Échelle sophistiquée */
+    --gray-50: #f8fafc;         /* Blanc cassé premium */
+    --gray-100: #f1f5f9;        /* Très clair sophistiqué */
+    --gray-200: #e2e8f0;        /* Clair élégant */
+    --gray-300: #cbd5e1;        /* Medium clair raffiné */
+    --gray-400: #94a3b8;        /* Medium sophistiqué */
+    --gray-500: #64748b;        /* Medium équilibré */
+    --gray-600: #475569;        /* Medium foncé premium */
+    --gray-700: #334155;        /* Foncé élégant */
+    --gray-800: #1e293b;        /* Très foncé sophistiqué */
+    --gray-900: #0f172a;        /* Ultra foncé premium */
+    --gray-950: #020617;        /* Noir sophistiqué */
+    
+    /* Couleurs de fond premium */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;    /* Légèrement plus chaud */
+    --bg-tertiary: #f1f5f9;     /* Plus sophistiqué */
+    --bg-dark: #000000;
+    --bg-overlay: rgba(15, 23, 42, 0.75);  /* Plus sophistiqué */
+    --bg-card: #ffffff;
+    --bg-elevated: #ffffff;     /* Pour cartes flottantes */
+    
+    /* Couleurs de texte premium */
+    --text-primary: #0f172a;    /* Noir plus chaud */
+    --text-secondary: #475569;   /* Gris plus sophistiqué */
+    --text-tertiary: #64748b;    /* Plus équilibré */
+    --text-inverse: #ffffff;
+    --text-muted: #94a3b8;      /* Plus premium */
+    --text-accent: #000000;     /* Accent textuel noir */
+    
+    /* Couleurs de bordure premium */
+    --border-primary: #e2e8f0;      /* Plus sophistiqué */
+    --border-secondary: #cbd5e1;    /* Plus premium */
+    --border-focus: #000000;        /* Focus noir */
+    --border-subtle: #f1f5f9;       /* Très subtil */
+    --border-elevated: #e2e8f0;     /* Pour éléments élevés */
+    
+    /* Couleurs de statut */
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #64748b;
+    
+    /* Arkly brand colors - Clean black & white */
+    --arkly-primary: #000000;
+    --arkly-primary-dark: #1a1a1a;
+    --arkly-primary-rgb: 0, 0, 0;
+    --arkly-secondary: #ffffff;
+    --arkly-secondary-rgb: 255, 255, 255;
+    
+    /* Alternative backgrounds for clean design */
+    --bg-alt: #fafafa;
+
+    /* Typographie premium - Stack corporate sophistiqué */
+    --font-family-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family-display: "Inter", system-ui, sans-serif;  /* Pour titres */
+    --font-family-mono: "SF Mono", "JetBrains Mono", "Fira Code", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+    
+    /* Tailles de police */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+    --text-5xl: 3rem;        /* 48px */
+    --text-6xl: 3.75rem;     /* 60px */
+    --text-7xl: 4.5rem;      /* 72px */
+    
+    /* Hauteurs de ligne */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+    
+    /* Poids de police */
+    --font-thin: 100;
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    --font-black: 900;
+    
+    /* Espacement */
+    --spacing-0: 0;
+    --spacing-1: 0.25rem;    /* 4px */
+    --spacing-2: 0.5rem;     /* 8px */
+    --spacing-3: 0.75rem;    /* 12px */
+    --spacing-4: 1rem;       /* 16px */
+    --spacing-5: 1.25rem;    /* 20px */
+    --spacing-6: 1.5rem;     /* 24px */
+    --spacing-8: 2rem;       /* 32px */
+    --spacing-10: 2.5rem;    /* 40px */
+    --spacing-12: 3rem;      /* 48px */
+    --spacing-16: 4rem;      /* 64px */
+    --spacing-20: 5rem;      /* 80px */
+    --spacing-24: 6rem;      /* 96px */
+    --spacing-32: 8rem;      /* 128px */
+    
+    /* Rayons de bordure */
+    --radius-none: 0;
+    --radius-sm: 0.125rem;   /* 2px */
+    --radius-base: 0.25rem;  /* 4px */
+    --radius-md: 0.375rem;   /* 6px */
+    --radius-lg: 0.5rem;     /* 8px */
+    --radius-xl: 0.75rem;    /* 12px */
+    --radius-2xl: 1rem;      /* 16px */
+    --radius-3xl: 1.5rem;    /* 24px */
+    --radius-full: 9999px;
+    
+    /* Ombres premium - Plus sophistiquées et subtiles */
+    --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.03);   /* Ultra subtile */
+    --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.08), 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+    --shadow-base: 0 1px 3px 0 rgba(15, 23, 42, 0.12), 0 1px 2px 0 rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.12), 0 2px 4px -1px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.12), 0 4px 6px -2px rgba(15, 23, 42, 0.06);
+    --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.12), 0 10px 10px -5px rgba(15, 23, 42, 0.05);
+    --shadow-2xl: 0 25px 50px -12px rgba(15, 23, 42, 0.2);
+    --shadow-inner: inset 0 2px 4px 0 rgba(15, 23, 42, 0.08);
+    --shadow-glow: 0 0 0 1px rgba(0, 82, 255, 0.05), 0 2px 8px 0 rgba(0, 82, 255, 0.1);  /* Lueur accent */
+    
+    /* Transitions premium - Plus fluides et sophistiquées */
+    --transition-none: none;
+    --transition-all: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);     /* Ease-out premium */
+    --transition-fast: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-slow: all 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-micro: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);   /* Micro-interactions */
+    --transition-bounce: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bounce subtil */
+    
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-toast: 1080;
+    
+    /* Breakpoints (pour référence dans le CSS) */
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
+    --bp-2xl: 1536px;
+    
+    /* Layout */
+    --container-max-width: 1200px;
+    --header-height: 4rem;    /* 64px */
+    --footer-height: auto;
+    
+    /* Animations */
+    --animation-duration-fast: 150ms;
+    --animation-duration-base: 250ms;
+    --animation-duration-slow: 400ms;
+    --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mode sombre (optionnel pour le futur) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #000000;
+        --bg-secondary: #0a0a0a;
+        --bg-tertiary: #111111;
+        --text-primary: #ffffff;
+        --text-secondary: #a1a1aa;
+        --text-tertiary: #71717a;
+        --border-primary: #27272a;
+        --border-secondary: #3f3f46;
+    }
+}

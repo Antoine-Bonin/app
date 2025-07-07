@@ -1,0 +1,395 @@
+/* Responsive - Media queries et adaptations mobiles */
+
+/* Mobile First - Styles de base pour mobile */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .arkly-container {
+        padding: 0 var(--spacing-3);
+    }
+    
+    .arkly-hero {
+        min-height: 80vh;
+        padding: var(--spacing-16) 0;
+    }
+    
+    .arkly-hero h1 {
+        font-size: var(--text-3xl);
+        line-height: var(--leading-tight);
+    }
+    
+    .subtitle {
+        font-size: var(--text-lg);
+    }
+    
+    .arkly-features-grid {
+        gap: var(--spacing-6);
+    }
+    
+    .arkly-feature-card {
+        padding: var(--spacing-6);
+    }
+    
+    .arkly-stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+        text-align: center;
+    }
+    
+    .arkly-stat-number {
+        font-size: var(--text-3xl);
+    }
+    
+    .arkly-cta-buttons {
+        width: 100%;
+    }
+    
+    .arkly-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .arkly-footer-content {
+        gap: var(--spacing-6);
+        text-align: center;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .arkly-hero h1 {
+        font-size: var(--text-4xl);
+    }
+    
+    .arkly-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .arkly-nav {
+        padding: 0 var(--spacing-5);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* Header améliorations */
+    .arkly-nav-links {
+        display: flex;
+    }
+    
+    .arkly-mobile-menu-toggle {
+        display: none;
+    }
+    
+    /* Hero améliorations */
+    .arkly-hero h1 {
+        font-size: var(--text-5xl);
+    }
+    
+    .arkly-hero-content {
+        max-width: 48rem;
+    }
+    
+    /* Features en 2 colonnes */
+    .arkly-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-8);
+    }
+    
+    /* Stats en ligne */
+    .arkly-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* CTA buttons en ligne */
+    .arkly-cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .arkly-btn {
+        width: auto;
+    }
+    
+    /* Footer en 2 colonnes */
+    .arkly-footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+    }
+    
+    /* Sections padding */
+    section {
+        padding: var(--spacing-20) 0;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* Container plus large */
+    .arkly-container {
+        padding: 0 var(--spacing-8);
+    }
+    
+    /* Hero plus grand */
+    .arkly-hero {
+        min-height: 100vh;
+    }
+    
+    .arkly-hero h1 {
+        font-size: var(--text-6xl);
+    }
+    
+    .arkly-hero-content {
+        max-width: 56rem;
+    }
+    
+    /* Features en 4 colonnes */
+    .arkly-features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-6);
+    }
+    
+    .arkly-feature-card {
+        padding: var(--spacing-8);
+    }
+    
+    /* Footer en 4 colonnes */
+    .arkly-footer-content {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: var(--spacing-12);
+    }
+    
+    /* Sections padding plus grand */
+    section {
+        padding: var(--spacing-24) 0;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .arkly-hero h1 {
+        font-size: var(--text-7xl);
+    }
+    
+    .arkly-hero-content {
+        max-width: 64rem;
+    }
+    
+    .subtitle {
+        font-size: var(--text-2xl);
+    }
+    
+    /* Stats plus grands */
+    .arkly-stat-number {
+        font-size: var(--text-6xl);
+    }
+    
+    /* Feature cards plus grandes */
+    .arkly-feature-card {
+        padding: var(--spacing-10);
+    }
+    
+    .arkly-feature-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+/* Extra extra large devices (1400px and up) */
+@media (min-width: 1400px) {
+    .arkly-container {
+        max-width: 1320px;
+    }
+    
+    section {
+        padding: var(--spacing-32) 0;
+    }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Ajustements pour écrans haute densité */
+    .arkly-feature-icon svg,
+    .arkly-social-link svg {
+        width: 1.1em;
+        height: 1.1em;
+    }
+}
+
+/* Landscape orientation optimizations */
+@media (orientation: landscape) and (max-height: 600px) {
+    .arkly-hero {
+        min-height: 90vh;
+        padding: var(--spacing-12) 0;
+    }
+    
+    .arkly-hero h1 {
+        font-size: var(--text-4xl);
+    }
+    
+    .subtitle {
+        font-size: var(--text-lg);
+        margin-bottom: var(--spacing-6);
+    }
+    
+    section {
+        padding: var(--spacing-12) 0;
+    }
+}
+
+/* Print styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    .arkly-header,
+    .arkly-mobile-menu-toggle,
+    .arkly-btn,
+    .arkly-social-links {
+        display: none !important;
+    }
+    
+    .arkly-hero {
+        min-height: auto;
+        padding: var(--spacing-8) 0;
+    }
+    
+    .arkly-footer {
+        border-top: 1px solid #000;
+        padding: var(--spacing-4) 0;
+    }
+    
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+    }
+    
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    .arkly-feature-card {
+        break-inside: avoid;
+        border: 1px solid #000;
+        margin-bottom: var(--spacing-4);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Ajustements pour appareils tactiles */
+    .arkly-btn {
+        min-height: 44px; /* Taille minimum recommandée pour le touch */
+        padding: var(--spacing-3) var(--spacing-6);
+    }
+    
+    .arkly-nav-link {
+        padding: var(--spacing-3) var(--spacing-4);
+    }
+    
+    .arkly-social-link {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    /* Suppression des effets hover pour tactile */
+    .arkly-feature-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-base);
+    }
+    
+    .arkly-btn-primary:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .hover-lift:hover,
+    .hover-scale:hover {
+        transform: none;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .arkly-hero-graphic {
+        animation: none;
+    }
+    
+    .arkly-feature-card,
+    .arkly-btn,
+    .arkly-social-link {
+        transition: none;
+    }
+    
+    .arkly-feature-card:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --border-primary: #000000;
+        --border-secondary: #000000;
+        --text-secondary: #000000;
+    }
+    
+    .arkly-feature-card {
+        border: 2px solid var(--border-primary);
+    }
+    
+    .arkly-btn-secondary,
+    .arkly-btn-outline {
+        border: 2px solid var(--border-primary);
+    }
+}
+
+/* Dark mode media query (préparation future) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #000000;
+        --bg-secondary: #0a0a0a;
+        --bg-tertiary: #111111;
+        --text-primary: #ffffff;
+        --text-secondary: #a1a1aa;
+        --text-tertiary: #71717a;
+        --border-primary: #27272a;
+        --border-secondary: #3f3f46;
+    }
+    
+    .arkly-header {
+        background: rgba(0, 0, 0, 0.95);
+        border-bottom-color: var(--border-primary);
+    }
+    
+    .arkly-feature-card {
+        background: var(--bg-secondary);
+        border-color: var(--border-primary);
+    }
+}
+
+/* Specific iPhone optimizations */
+@supports (-webkit-touch-callout: none) {
+    /* iOS Safari specific */
+    .arkly-hero {
+        min-height: -webkit-fill-available;
+    }
+    
+    /* Fix pour le viewport iOS */
+    .arkly-hero {
+        height: calc(100vh - var(--header-height));
+        min-height: calc(100vh - var(--header-height));
+    }
+}
+
+/* Android Chrome optimizations */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+    /* Android specific styles si nécessaire */
+    .arkly-btn {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}

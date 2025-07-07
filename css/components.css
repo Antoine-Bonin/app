@@ -1,0 +1,1822 @@
+/* Components - Composants réutilisables premium */
+
+/* Typography premium */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-display);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-4);
+    letter-spacing: -0.025em;  /* Tracking plus serré, plus premium */
+}
+
+h1 {
+    font-size: var(--text-5xl);
+    line-height: var(--leading-none);
+    font-weight: var(--font-extrabold);
+    letter-spacing: -0.04em;
+}
+
+h2 {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    letter-spacing: -0.03em;
+}
+
+h3 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-semibold);
+    letter-spacing: -0.02em;
+}
+
+h4 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    letter-spacing: -0.01em;
+}
+
+p {
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--spacing-4);
+    color: var(--text-secondary);
+}
+
+.subtitle {
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--spacing-8);
+    font-weight: var(--font-normal);
+}
+
+/* Logo premium */
+.arkly-logo {
+    font-family: var(--font-family-display);
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    transition: var(--transition-all);
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.arkly-logo::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: var(--transition-all);
+}
+
+.arkly-logo:hover {
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+.arkly-logo:hover::after {
+    width: 100%;
+}
+
+/* Navigation links premium */
+.arkly-nav-link {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-secondary);
+    transition: var(--transition-all);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.arkly-nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 82, 255, 0.05), transparent);
+    transition: var(--transition-slow);
+}
+
+.arkly-nav-link:hover {
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    transform: translateY(-1px);
+}
+
+.arkly-nav-link:hover::before {
+    left: 100%;
+}
+
+/* Boutons premium */
+.arkly-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-6);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    border-radius: var(--radius-lg);
+    border: 1px solid transparent;
+    transition: var(--transition-all);
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-family-primary);
+    letter-spacing: -0.01em;
+}
+
+.arkly-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition-slow);
+}
+
+.arkly-btn:hover::before {
+    left: 100%;
+}
+
+.arkly-btn:focus {
+    outline: none;
+    box-shadow: var(--shadow-glow);
+}
+
+.arkly-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Bouton primaire premium */
+.arkly-btn-primary {
+    background: var(--primary);
+    color: var(--text-inverse);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.arkly-btn-primary:hover:not(:disabled) {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.arkly-btn-primary:active:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Bouton secondaire premium */
+.arkly-btn-secondary {
+    background: var(--secondary);
+    color: var(--text-primary);
+    border-color: var(--border-primary);
+    box-shadow: var(--shadow-xs);
+}
+
+.arkly-btn-secondary:hover:not(:disabled) {
+    background: var(--secondary-hover);
+    border-color: var(--border-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.arkly-btn-secondary:active:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Bouton outline */
+.arkly-btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border-color: var(--border-primary);
+}
+
+.arkly-btn-outline:hover:not(:disabled) {
+    background: var(--bg-secondary);
+    border-color: var(--border-secondary);
+}
+
+/* Tailles de boutons */
+.arkly-btn-sm {
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--text-xs);
+}
+
+.arkly-btn-lg {
+    padding: var(--spacing-4) var(--spacing-8);
+    font-size: var(--text-base);
+}
+
+/* Bouton de navigation mobile */
+.arkly-mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: var(--spacing-2);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .arkly-mobile-menu-toggle {
+        display: none;
+    }
+}
+
+.arkly-mobile-menu-toggle span {
+    width: 20px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 1px;
+    transition: var(--transition-all);
+}
+
+/* Feature cards premium */
+.arkly-feature-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-8);
+    text-align: center;
+    transition: var(--transition-all);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-xs);
+}
+
+.arkly-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 82, 255, 0.01) 0%, 
+        rgba(0, 82, 255, 0.03) 50%,
+        transparent 100%);
+    opacity: 0;
+    transition: var(--transition-all);
+}
+
+.arkly-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--border-elevated);
+}
+
+.arkly-feature-card:hover::before {
+    opacity: 1;
+}
+
+.arkly-feature-card:hover::before {
+    opacity: 1;
+}
+
+.arkly-feature-icon {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-6);
+    transition: var(--transition-bounce);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.arkly-feature-icon::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    border-radius: var(--radius-xl);
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition-all);
+}
+
+.arkly-feature-card:hover .arkly-feature-icon {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: var(--shadow-md);
+}
+
+.arkly-feature-card:hover .arkly-feature-icon::before {
+    opacity: 0.1;
+}
+
+.arkly-feature-card h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--spacing-3);
+}
+
+.arkly-feature-card p {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+}
+
+/* Stats items */
+.arkly-stat-item {
+    text-align: center;
+    padding: var(--spacing-6);
+    border-radius: 8px !important;
+}
+
+.arkly-stat-number {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    color: var(--text-inverse);
+    margin-bottom: var(--spacing-2);
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .arkly-stat-number {
+        font-size: var(--text-5xl);
+    }
+}
+
+.arkly-stat-label {
+    font-size: var(--text-sm);
+    color: var(--gray-400);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* CTA Group */
+.arkly-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    align-items: center;
+    margin-top: var(--spacing-8);
+}
+
+@media (min-width: 640px) {
+    .arkly-cta-group {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-6);
+    }
+}
+
+/* Hero visual */
+.arkly-hero-visual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.arkly-hero-graphic {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        var(--primary) 0%, 
+        transparent 25%, 
+        transparent 75%, 
+        var(--primary) 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Social links */
+.arkly-social-links {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-6);
+}
+
+.arkly-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--gray-800);
+    color: var(--gray-400);
+    border-radius: var(--radius-full);
+    transition: var(--transition-all);
+}
+
+.arkly-social-link:hover {
+    background: var(--gray-700);
+    color: var(--text-inverse);
+    transform: translateY(-2px);
+}
+
+/* Footer sections */
+.arkly-footer-section h4 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--text-inverse);
+    margin-bottom: var(--spacing-4);
+}
+
+.arkly-footer-section p {
+    color: var(--gray-400);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+}
+
+.arkly-footer-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.arkly-footer-section a {
+    color: var(--gray-400);
+    font-size: var(--text-sm);
+    transition: var(--transition-all);
+}
+
+.arkly-footer-section a:hover {
+    color: var(--text-inverse);
+}
+
+.arkly-footer-bottom p {
+    color: var(--gray-500);
+    font-size: var(--text-sm);
+    margin: 0;
+}
+
+.arkly-footer-links a {
+    color: var(--gray-500);
+    font-size: var(--text-sm);
+    transition: var(--transition-all);
+}
+
+.arkly-footer-links a:hover {
+    color: var(--gray-400);
+}
+
+/* Scroll indicator */
+.arkly-scroll-indicator {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    height: 3px;
+    background: var(--primary);
+    z-index: var(--z-fixed);
+    transform-origin: 0%;
+    transition: var(--transition-fast);
+}
+
+/* Loading states */
+.arkly-skeleton {
+    background: linear-gradient(90deg, 
+        var(--gray-200) 25%, 
+        var(--gray-300) 50%, 
+        var(--gray-200) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+    border-radius: var(--radius-md);
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Éléments premium supplémentaires */
+
+/* Badge premium */
+.arkly-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    padding: var(--spacing-1) var(--spacing-3);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.arkly-badge-accent {
+    background: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Séparateur premium */
+.arkly-divider {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--border-primary) 20%, 
+        var(--border-primary) 80%, 
+        transparent 100%);
+    margin: var(--spacing-8) 0;
+}
+
+.arkly-divider-vertical {
+    width: 1px;
+    height: 2rem;
+    background: var(--border-primary);
+    margin: 0 var(--spacing-4);
+}
+
+/* Quote premium - pour témoignages */
+.arkly-quote {
+    position: relative;
+    padding: var(--spacing-6);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    border-left: 4px solid var(--accent);
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.arkly-quote::before {
+    content: '"';
+    position: absolute;
+    top: var(--spacing-2);
+    left: var(--spacing-4);
+    font-size: var(--text-4xl);
+    color: var(--accent);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+}
+
+/* Progress bar premium */
+.arkly-progress {
+    width: 100%;
+    height: 4px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    position: relative;
+}
+
+.arkly-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 100%);
+    border-radius: var(--radius-full);
+    transition: var(--transition-slow);
+    position: relative;
+}
+
+.arkly-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+/* Texte accentué premium */
+.arkly-text-accent {
+    color: var(--accent);
+    font-weight: var(--font-semibold);
+}
+
+.arkly-text-gradient {
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: var(--font-bold);
+}
+
+/* Container premium avec bordure subtile */
+.arkly-glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ============================================
+   NEW PAGES SPECIFIC STYLES
+   ============================================ */
+
+/* Legal Pages Styles (Privacy, Terms) */
+.arkly-legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-8) 0;
+}
+
+.arkly-legal-content h2 {
+    font-size: var(--text-3xl);
+    color: var(--text-primary);
+    margin-top: var(--spacing-12);
+    margin-bottom: var(--spacing-6);
+    padding-bottom: var(--spacing-3);
+    border-bottom: 2px solid var(--border-primary);
+}
+
+.arkly-legal-content h3 {
+    font-size: var(--text-xl);
+    color: var(--text-primary);
+    margin-top: var(--spacing-8);
+    margin-bottom: var(--spacing-4);
+}
+
+.arkly-legal-content ul {
+    margin: var(--spacing-4) 0;
+    padding-left: var(--spacing-6);
+    list-style-type: disc;
+}
+
+.arkly-legal-content li {
+    margin-bottom: var(--spacing-2);
+    line-height: var(--leading-relaxed);
+    color: var(--text-secondary);
+}
+
+.arkly-legal-content strong {
+    color: var(--text-primary);
+    font-weight: var(--font-semibold);
+}
+
+.arkly-warning-box {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 193, 7, 0.05));
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    margin: var(--spacing-8) 0;
+}
+
+.arkly-warning-box h3 {
+    color: #f59e0b;
+    margin-bottom: var(--spacing-4);
+}
+
+.arkly-contact-info {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    margin: var(--spacing-6) 0;
+    border: 1px solid var(--border-primary);
+}
+
+.arkly-contact-info p {
+    margin-bottom: var(--spacing-2);
+}
+
+/* Security Page Styles */
+.arkly-security-overview {
+    margin-bottom: var(--spacing-16);
+}
+
+.arkly-security-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-stat-card {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    text-align: center;
+    border: 1px solid var(--border-primary);
+    transition: var(--transition-default);
+}
+
+.arkly-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.arkly-stat-number {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-extrabold);
+    color: var(--arkly-primary);
+    display: block;
+    margin-bottom: var(--spacing-2);
+}
+
+.arkly-stat-label {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: var(--font-semibold);
+}
+
+.arkly-security-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-security-pillar {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-8);
+    border: 1px solid var(--border-primary);
+    transition: var(--transition-default);
+}
+
+.arkly-security-pillar:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.arkly-security-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--arkly-primary), var(--arkly-secondary));
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-6);
+}
+
+.arkly-security-details {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.arkly-security-category {
+    margin-bottom: var(--spacing-10);
+}
+
+.arkly-security-category h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-4);
+    font-size: var(--text-xl);
+}
+
+.arkly-certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-cert-card {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    text-align: center;
+    border: 1px solid var(--border-primary);
+    transition: var(--transition-default);
+}
+
+.arkly-cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.arkly-cert-logo {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--arkly-primary), var(--arkly-secondary));
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-4);
+    font-weight: var(--font-bold);
+    color: white;
+    font-size: var(--text-lg);
+}
+
+.arkly-cert-status {
+    display: inline-block;
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    margin-top: var(--spacing-4);
+}
+
+/* Bug Bounty Styles */
+.arkly-bug-bounty {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.arkly-bounty-rewards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-6);
+    margin: var(--spacing-8) 0;
+}
+
+.arkly-bounty-tier {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+}
+
+.arkly-bounty-amount {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    color: var(--arkly-primary);
+    margin: var(--spacing-2) 0;
+}
+
+.arkly-bounty-contact {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-8);
+    margin-top: var(--spacing-8);
+    border: 1px solid var(--border-primary);
+}
+
+/* Incident Response Timeline */
+.arkly-incident-response {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.arkly-response-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-response-step {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+    position: relative;
+}
+
+.arkly-step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--arkly-primary);
+    color: white;
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-bold);
+    position: absolute;
+    top: -20px;
+    left: var(--spacing-6);
+}
+
+.arkly-step-time {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    display: inline-block;
+    margin-top: var(--spacing-4);
+}
+
+.arkly-security-contact {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.arkly-contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-contact-method {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+}
+
+/* Press Page Styles */
+.arkly-press-grid {
+    display: grid;
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-press-item {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+    transition: var(--transition-default);
+}
+
+.arkly-press-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.arkly-press-featured {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, var(--bg-alt), rgba(var(--arkly-primary-rgb), 0.05));
+    border: 1px solid rgba(var(--arkly-primary-rgb), 0.2);
+}
+
+.arkly-press-date {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-2);
+}
+
+.arkly-press-tags {
+    display: flex;
+    gap: var(--spacing-2);
+    margin: var(--spacing-4) 0;
+    flex-wrap: wrap;
+}
+
+.arkly-tag {
+    background: rgba(var(--arkly-primary-rgb), 0.1);
+    color: var(--arkly-primary);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+}
+
+.arkly-press-link {
+    color: var(--arkly-primary);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-4);
+    transition: var(--transition-default);
+}
+
+.arkly-press-link:hover {
+    color: var(--arkly-primary-dark);
+}
+
+/* Media Coverage */
+.arkly-media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-media-item {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+    transition: var(--transition-default);
+}
+
+.arkly-media-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.arkly-media-logo {
+    font-weight: var(--font-bold);
+    color: var(--arkly-primary);
+    font-size: var(--text-lg);
+    margin-bottom: var(--spacing-3);
+}
+
+.arkly-media-date {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+    margin-bottom: var(--spacing-3);
+}
+
+.arkly-media-link {
+    color: var(--arkly-primary);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-4);
+    transition: var(--transition-default);
+}
+
+.arkly-media-link:hover {
+    color: var(--arkly-primary-dark);
+}
+
+/* Podcast Section */
+.arkly-podcast-grid {
+    display: grid;
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-podcast-item {
+    display: flex;
+    gap: var(--spacing-6);
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+    transition: var(--transition-default);
+}
+
+.arkly-podcast-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.arkly-podcast-image {
+    font-size: var(--text-4xl);
+    flex-shrink: 0;
+}
+
+.arkly-podcast-content {
+    flex: 1;
+}
+
+.arkly-podcast-date {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+    margin-bottom: var(--spacing-3);
+}
+
+.arkly-podcast-link {
+    color: var(--arkly-primary);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-4);
+    transition: var(--transition-default);
+}
+
+.arkly-podcast-link:hover {
+    color: var(--arkly-primary-dark);
+}
+
+/* Media Kit */
+.arkly-media-kit {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.arkly-kit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-kit-item {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+    text-align: left;
+}
+
+.arkly-kit-item ul {
+    margin: var(--spacing-4) 0;
+    padding-left: var(--spacing-6);
+    list-style-type: disc;
+}
+
+.arkly-kit-item li {
+    margin-bottom: var(--spacing-2);
+    color: var(--text-secondary);
+}
+
+/* Media Contact */
+.arkly-media-contact {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.arkly-contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+    margin: var(--spacing-8) 0;
+}
+
+.arkly-contact-card {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+}
+
+.arkly-media-guidelines {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    margin-top: var(--spacing-8);
+    border: 1px solid var(--border-primary);
+}
+
+.arkly-media-guidelines ul {
+    margin-top: var(--spacing-4);
+    padding-left: var(--spacing-6);
+    list-style-type: disc;
+}
+
+.arkly-media-guidelines li {
+    margin-bottom: var(--spacing-2);
+    color: var(--text-secondary);
+}
+
+/* Newsletter Styles */
+.arkly-newsletter-signup,
+.arkly-newsletter-insights {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.arkly-newsletter-form {
+    display: flex;
+    gap: var(--spacing-4);
+    margin: var(--spacing-6) 0;
+    flex-wrap: wrap;
+}
+
+.arkly-newsletter-form input {
+    flex: 1;
+    min-width: 200px;
+    padding: var(--spacing-3) var(--spacing-4);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--border-radius-default);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: var(--text-base);
+}
+
+.arkly-newsletter-form input:focus {
+    outline: none;
+    border-color: var(--arkly-primary);
+    box-shadow: 0 0 0 3px rgba(var(--arkly-primary-rgb), 0.1);
+}
+
+.arkly-newsletter-note,
+.arkly-newsletter-disclaimer {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+    margin-top: var(--spacing-4);
+}
+
+/* Insights Page Styles */
+.arkly-featured-research {
+    margin-bottom: var(--spacing-16);
+}
+
+.arkly-research-hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-8);
+    align-items: center;
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-8);
+    border: 1px solid var(--border-primary);
+}
+
+.arkly-research-category {
+    display: inline-block;
+    background: rgba(var(--arkly-primary-rgb), 0.1);
+    color: var(--arkly-primary);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--spacing-4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.arkly-research-meta {
+    display: flex;
+    gap: var(--spacing-4);
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+    margin: var(--spacing-4) 0;
+    align-items: center;
+}
+
+.arkly-report-cover {
+    width: 200px;
+    height: 280px;
+    background: linear-gradient(135deg, var(--arkly-primary), var(--arkly-secondary));
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: var(--spacing-4);
+}
+
+.arkly-report-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--spacing-2);
+}
+
+.arkly-report-subtitle {
+    font-size: var(--text-sm);
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Insights Grid */
+.arkly-insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-insight-card {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+    transition: var(--transition-default);
+}
+
+.arkly-insight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.arkly-insight-category {
+    display: inline-block;
+    background: rgba(var(--arkly-primary-rgb), 0.1);
+    color: var(--arkly-primary);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--spacing-3);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.arkly-insight-meta {
+    display: flex;
+    gap: var(--spacing-4);
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+    margin: var(--spacing-4) 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.arkly-author {
+    font-weight: var(--font-medium);
+}
+
+.arkly-insight-link {
+    color: var(--arkly-primary);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-4);
+    transition: var(--transition-default);
+}
+
+.arkly-insight-link:hover {
+    color: var(--arkly-primary-dark);
+}
+
+/* Reports Grid */
+.arkly-reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-report-card {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+    transition: var(--transition-default);
+}
+
+.arkly-report-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.arkly-report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+}
+
+.arkly-report-type {
+    background: rgba(var(--arkly-primary-rgb), 0.1);
+    color: var(--arkly-primary);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.arkly-report-date {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+}
+
+.arkly-report-stats {
+    display: flex;
+    gap: var(--spacing-6);
+    margin: var(--spacing-6) 0;
+}
+
+.arkly-stat {
+    text-align: center;
+}
+
+.arkly-stat-number {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--arkly-primary);
+}
+
+.arkly-stat-label {
+    color: var(--text-tertiary);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.arkly-report-features {
+    display: flex;
+    gap: var(--spacing-2);
+    margin: var(--spacing-4) 0;
+    flex-wrap: wrap;
+}
+
+.arkly-feature {
+    background: rgba(var(--arkly-secondary-rgb), 0.1);
+    color: var(--arkly-secondary);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+}
+
+.arkly-report-highlights {
+    margin: var(--spacing-4) 0;
+}
+
+.arkly-highlight {
+    margin-bottom: var(--spacing-2);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+}
+
+/* Thought Leadership */
+.arkly-leadership-grid {
+    display: grid;
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.arkly-leadership-item {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+    transition: var(--transition-default);
+}
+
+.arkly-leadership-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.arkly-leadership-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+}
+
+.arkly-author-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--arkly-primary), var(--arkly-secondary));
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: var(--font-bold);
+    font-size: var(--text-lg);
+}
+
+.arkly-author-info h4 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.arkly-author-info p {
+    margin: 0;
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+}
+
+.arkly-leadership-venue {
+    color: var(--arkly-primary);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    margin: var(--spacing-4) 0;
+}
+
+.arkly-leadership-link {
+    color: var(--arkly-primary);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-4);
+    transition: var(--transition-default);
+}
+
+.arkly-leadership-link:hover {
+    color: var(--arkly-primary-dark);
+}
+
+/* Market Data Dashboard */
+.arkly-market-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+    margin: var(--spacing-8) 0;
+}
+
+.arkly-market-stat {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    text-align: center;
+    border: 1px solid var(--border-primary);
+}
+
+.arkly-market-stat h3 {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-3);
+    font-weight: var(--font-semibold);
+}
+
+.arkly-stat-value {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.arkly-stat-change {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+}
+
+.arkly-stat-change.positive {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+}
+
+.arkly-stat-change.neutral {
+    background: rgba(156, 163, 175, 0.1);
+    color: #9ca3af;
+}
+
+.arkly-stat-change.negative {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.arkly-market-note {
+    text-align: center;
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+    margin-top: var(--spacing-4);
+}
+
+/* Newsletter Features */
+.arkly-newsletter-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+    margin: var(--spacing-8) 0;
+}
+
+.arkly-newsletter-feature {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--border-primary);
+    text-align: left;
+}
+
+.arkly-newsletter-feature h4 {
+    margin-bottom: var(--spacing-3);
+    color: var(--text-primary);
+    font-size: var(--text-lg);
+}
+
+.arkly-newsletter-feature p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+}
+
+/* Article Page Styles */
+.arkly-article-header {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.arkly-breadcrumb {
+    margin-bottom: var(--spacing-4);
+}
+
+.arkly-breadcrumb a {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    font-size: var(--text-sm);
+}
+
+.arkly-breadcrumb a:hover {
+    color: var(--text-primary);
+}
+
+.arkly-article-category {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--text-primary);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--spacing-6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.arkly-article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-8);
+    padding-top: var(--spacing-6);
+    border-top: 1px solid var(--border-primary);
+}
+
+.arkly-author-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+}
+
+.arkly-author-avatar {
+    width: 48px;
+    height: 48px;
+    background: var(--text-primary);
+    color: white;
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-bold);
+    font-size: var(--text-lg);
+}
+
+.arkly-author-name {
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-1);
+}
+
+.arkly-author-title {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+}
+
+.arkly-article-details {
+    display: flex;
+    gap: var(--spacing-4);
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+    align-items: center;
+}
+
+.arkly-article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+}
+
+.arkly-lead {
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-8);
+    font-weight: var(--font-normal);
+}
+
+.arkly-article-content h2 {
+    margin-top: var(--spacing-12);
+    margin-bottom: var(--spacing-6);
+    color: var(--text-primary);
+    font-size: var(--text-3xl);
+}
+
+.arkly-article-content h3 {
+    margin-top: var(--spacing-8);
+    margin-bottom: var(--spacing-4);
+    color: var(--text-primary);
+    font-size: var(--text-xl);
+}
+
+.arkly-article-content ul,
+.arkly-article-content ol {
+    margin: var(--spacing-6) 0;
+    padding-left: var(--spacing-8);
+}
+
+.arkly-article-content li {
+    margin-bottom: var(--spacing-3);
+    line-height: var(--leading-relaxed);
+}
+
+.arkly-article-content strong {
+    color: var(--text-primary);
+    font-weight: var(--font-semibold);
+}
+
+.arkly-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-6);
+    margin: var(--spacing-8) 0;
+}
+
+.arkly-stat-item {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    text-align: center;
+    border: 1px solid var(--border-primary);
+}
+
+.arkly-stat-item .arkly-stat-number {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: var(--spacing-2);
+}
+
+.arkly-stat-item .arkly-stat-label {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: var(--font-medium);
+}
+
+.arkly-article-footer {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-8);
+    margin: var(--spacing-12) 0;
+    border: 1px solid var(--border-primary);
+}
+
+.arkly-article-footer em {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.arkly-related-articles {
+    text-align: center;
+    margin-top: var(--spacing-8);
+}
+
+/* Coming Soon Section */
+.arkly-coming-soon {
+    text-align: center;
+    margin-top: var(--spacing-12);
+    padding: var(--spacing-8);
+    background: var(--bg-alt);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-primary);
+}
+
+.arkly-coming-soon h3 {
+    margin-bottom: var(--spacing-4);
+    color: var(--text-primary);
+}
+
+.arkly-coming-soon p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Responsive Design for Article */
+@media (max-width: 768px) {
+    .arkly-article-meta {
+        flex-direction: column;
+        gap: var(--spacing-4);
+        text-align: center;
+    }
+    
+    .arkly-article-details {
+        flex-direction: column;
+        gap: var(--spacing-2);
+    }
+    
+    .arkly-article-content {
+        font-size: var(--text-base);
+    }
+    
+    .arkly-lead {
+        font-size: var(--text-lg);
+    }
+    
+    .arkly-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
