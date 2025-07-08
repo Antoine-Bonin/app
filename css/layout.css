@@ -110,7 +110,8 @@
     left: 0;
     right: 0;
     height: var(--header-height);
-    background: rgba(248, 250, 252, 0.85);  /* Plus sophistiqué */
+    background: #fff !important;  /* Toujours clair/blanc */
+    color: var(--text-primary) !important;  /* Texte toujours sombre */
     backdrop-filter: blur(20px);             /* Plus intense */
     border-bottom: 1px solid var(--border-subtle);
     z-index: var(--z-fixed);
@@ -120,7 +121,8 @@
 
 /* Header avec scroll - effet premium */
 .arkly-header.scrolled {
-    background: rgba(248, 250, 252, 0.95);
+    background: #fff !important;  /* Toujours clair/blanc */
+    color: var(--text-primary) !important;  /* Texte toujours sombre */
     border-bottom-color: var(--border-primary);
     box-shadow: var(--shadow-sm);
 }
@@ -390,4 +392,23 @@ section {
     .arkly-lg-hidden {
         display: none;
     }
+}
+
+/* Force le mode clair même si l'utilisateur est en mode sombre */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #ffffff !important;
+    --bg-secondary: #f8fafc !important;
+    --bg-tertiary: #f1f5f9 !important;
+    --text-primary: #0f172a !important;
+    --text-secondary: #475569 !important;
+    --text-tertiary: #64748b !important;
+    --border-primary: #e5e7eb !important;
+    --border-secondary: #e5e7eb !important;
+  }
+}
+
+.arkly-logo-img {
+    max-height: 20px;
+    width: auto;
 }

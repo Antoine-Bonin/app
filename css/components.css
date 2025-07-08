@@ -63,15 +63,28 @@ p {
 }
 
 .arkly-logo-img {
-    height: 32px;
+    height: 18px;
     width: auto;
     transition: var(--transition-all);
+    /* Enhanced image sharpness with smooth edges */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+    image-rendering: smooth;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale3d(1, 1, 1);
+    transform: translateZ(0) scale3d(1, 1, 1);
+    filter: contrast(1.05) brightness(1.01) saturate(1.02);
+    -webkit-filter: contrast(1.05) brightness(1.01) saturate(1.02);
+    will-change: transform;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .arkly-logo::after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
@@ -89,7 +102,41 @@ p {
 }
 
 .arkly-logo:hover::after {
-    width: 90px; /* Largeur adaptée au texte "ARKLY" avec Orbitron */
+    width: 170px;
+ /* Largeur augmentée pour un effet plus long */
+}
+
+/* Enhanced logo sharpness for hero section */
+.arkly-hero img[src*="Arklycapital.png"] {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+    image-rendering: smooth;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale3d(1, 1, 1);
+    transform: translateZ(0) scale3d(1, 1, 1);
+    filter: contrast(1.08) brightness(1.03) saturate(1.05) blur(0.1px) contrast(1.02);
+    -webkit-filter: contrast(1.08) brightness(1.03) saturate(1.05);
+    will-change: transform;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Smooth edges while maintaining sharpness */
+    image-orientation: from-image;
+}
+
+/* General image sharpening for all Arkly logos */
+img[src*="Arkly"], img[src*="arkly"] {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+    image-rendering: smooth;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    filter: contrast(1.03) brightness(1.01);
+    -webkit-filter: contrast(1.03) brightness(1.01);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Navigation links premium */
