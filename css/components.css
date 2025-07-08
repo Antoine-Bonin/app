@@ -287,10 +287,24 @@ img[src*="Arkly"], img[src*="arkly"] {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: var(--spacing-2);
+    padding: var(--spacing-3);
     background: none;
     border: none;
     cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    min-width: 32px;
+    min-height: 32px;
+    justify-content: center;
+    align-items: center;
+    /* Debug: background temporaire pour voir le bouton */
+    /* background: rgba(255, 0, 0, 0.1); */
+}
+
+@media (max-width: 767.98px) {
+    .arkly-mobile-menu-toggle {
+        display: flex !important;
+    }
 }
 
 @media (min-width: 768px) {
@@ -300,11 +314,12 @@ img[src*="Arkly"], img[src*="arkly"] {
 }
 
 .arkly-mobile-menu-toggle span {
-    width: 20px;
-    height: 2px;
+    width: 24px;
+    height: 3px;
     background: var(--text-primary);
-    border-radius: 1px;
+    border-radius: 2px;
     transition: var(--transition-all);
+    display: block;
 }
 
 /* Feature cards premium */

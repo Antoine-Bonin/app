@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>arkly.capital - Investment Calculator</title>
+    <title>arkly.capital - Public presale</title>
     
     <!-- Meta Tags -->
     <meta name="description" content="Calculate ARKLY token investments on arkly.capital platform.">
@@ -93,6 +93,25 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-spinner {
+            animation: spin 1s linear infinite;
+        }
+        
+        .price-updated {
+            animation: pulse 0.5s ease-in-out;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body class="app-container">
@@ -110,6 +129,11 @@
                 <a href="contact.html" class="arkly-nav-link">Contact</a>
                 <a href="app.html" class="arkly-btn arkly-btn-primary arkly-nav-cta">Platform</a>
             </div>
+            <button class="arkly-mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -118,7 +142,7 @@
             <!-- Platform Header -->
             <div style="text-align: center; margin-bottom: var(--spacing-12);">
                 <div class="arkly-badge arkly-badge-accent">Public Presale</div>
-                <h1 style="margin: var(--spacing-4) 0;">ARKLY Token Calculator</h1>
+                <h1 style="margin: var(--spacing-4) 0;">ARKLY Public presale</h1>
                 <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
                     Public Presale – Fixed Price: $0.10<br>
                     Seed round closed at $0.083 – now open to public at $0.10/token.
@@ -145,7 +169,12 @@
                             <div style="color: var(--text-secondary); font-size: var(--text-sm);">Price per ARKLY</div>
                         </div>
                         <div>
-                            <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--accent);">$230</div>
+                            <div id="solPrice" style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--accent);">
+                                <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                    <span>Loading...</span>
+                                    <div class="loading-spinner" style="width: 16px; height: 16px; border: 2px solid var(--border-primary); border-top: 2px solid var(--accent); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                                </div>
+                            </div>
                             <div style="color: var(--text-secondary); font-size: var(--text-sm);">SOL Price (USD)</div>
                         </div>
                         <div>
@@ -160,7 +189,7 @@
                     
                     <!-- Investment Calculator -->
                     <div style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); padding: var(--spacing-6); margin-bottom: var(--spacing-6);">
-                        <h4 style="color: var(--accent); margin-bottom: var(--spacing-4); text-align: center;">Investment Calculator</h4>
+                        <h4 style="color: var(--accent); margin-bottom: var(--spacing-4); text-align: center;">Public presale</h4>
                         
                         <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--spacing-4); align-items: center; margin-bottom: var(--spacing-4);">
                             <div>
@@ -242,11 +271,11 @@
                             Contact us to proceed with your ARKLY token purchase. Our team will guide you through the secure transaction process.
                         </p>
                         <div style="text-align: center;">
-                            <a href="mailto:purchase@arkly.capital" class="arkly-btn arkly-btn-primary" style="display: inline-flex; align-items: center;">
+                            <a href="mailto:contact@arkly.capital" class="arkly-btn arkly-btn-primary" style="display: inline-flex; align-items: center;">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
-                                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    <path d="M16 11V7a4 4 0 0 0-8 0v4H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-2zM10 7a2 2 0 1 1 4 0v4h-4V7z"/>
                                 </svg>
-                                Contact for Purchase
+                                Buy Now
                             </a>
                         </div>
                     </div>
@@ -273,20 +302,15 @@
                             <li><strong>Token Standard:</strong> SPL Token</li>
                             <li><strong>Fixed Price:</strong> $0.10 per ARKLY</li>
                             <li><strong>Total Supply:</strong> 100M ARKLY</li>
-                            <li><strong>Minimum:</strong> 2 SOL (~$460)</li>
-                            <li><strong>Maximum:</strong> 50 SOL (~$11,500)</li>
+                            <li><strong>Minimum:</strong> 2 SOL</li>
+                            <li><strong>Maximum:</strong> 50 SOL</li>
                             <li><strong>Instant delivery:</strong> No vesting</li>
                             <li><strong>Token Type:</strong> Platform utility token</li>
                         </ul>
                     </div>
                 </div>
                 
-                <div style="margin-top: var(--spacing-6); padding-top: var(--spacing-4); border-top: 1px solid var(--border-primary);">
-                    <p style="color: var(--text-tertiary); font-size: var(--text-xs); line-height: var(--leading-relaxed);">
-                        <strong>⚠️ Important:</strong> This is a demonstration interface. Always verify official contacts and terms before making any purchase. 
-                        For questions, contact <a href="mailto:support@arkly.capital" style="color: var(--accent);">support@arkly.capital</a>
-                    </p>
-                </div>
+                
                 
                 <!-- Presale Summary -->
                 <div style="margin-top: var(--spacing-8); padding: var(--spacing-6); background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-lg);">
@@ -359,7 +383,7 @@
                 <div style="text-align: center; margin-top: var(--spacing-8);">
                     <p style="color: var(--text-tertiary); font-size: var(--text-sm);">
                         Want to Join Waitlist? Contact us at 
-                        <a href="mailto:platform@arkly.capital" style="color: var(--accent);">platform@arkly.capital</a>
+                        <a href="mailto:contact@arkly.capital" style="color: var(--accent);">contact@arkly.capital</a>
                     </p>
                 </div>
             </div>
@@ -428,7 +452,70 @@
     <script>
         // Simplified calculator - no wallet integration
         const tokenPrice = 0.10; // Fixed price of $0.10 per ARKLY token
-        const solPrice = 230; // SOL price in USD
+        let solPrice = 230; // Default SOL price in USD (will be updated by API)
+        
+        // Fetch SOL price from CoinGecko API
+        async function fetchSOLPrice() {
+            try {
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd&include_24hr_change=true');
+                const data = await response.json();
+                
+                if (data.solana && data.solana.usd) {
+                    const previousPrice = solPrice;
+                    solPrice = data.solana.usd;
+                    const change24h = data.solana.usd_24h_change || 0;
+                    
+                    // Update SOL price display
+                    const solPriceElement = document.getElementById('solPrice');
+                    if (solPriceElement) {
+                        const changeColor = change24h >= 0 ? '#059669' : '#dc2626';
+                        const changeSymbol = change24h >= 0 ? '+' : '';
+                        const priceDirection = previousPrice && solPrice > previousPrice ? '↗' : previousPrice && solPrice < previousPrice ? '↘' : '';
+                        
+                        solPriceElement.innerHTML = `
+                            <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--accent); display: flex; align-items: center; justify-content: center; gap: 4px;">
+                                $${solPrice.toFixed(2)}
+                                ${priceDirection ? `<span style="font-size: 14px; color: ${changeColor};">${priceDirection}</span>` : ''}
+                            </div>
+                            <div style="font-size: var(--text-xs); color: ${changeColor}; margin-top: 2px;">
+                                ${changeSymbol}${change24h.toFixed(2)}% (24h)
+                            </div>
+                        `;
+                        
+                        // Add pulse animation to show update
+                        solPriceElement.classList.add('price-updated');
+                        setTimeout(() => {
+                            solPriceElement.classList.remove('price-updated');
+                        }, 500);
+                    }
+                    
+                    // Update calculator if there's input
+                    updateCalculator();
+                    
+                    console.log(`SOL Price updated: $${solPrice.toFixed(2)} (${change24h >= 0 ? '+' : ''}${change24h.toFixed(2)}% 24h)`);
+                } else {
+                    throw new Error('Invalid API response');
+                }
+            } catch (error) {
+                console.error('Error fetching SOL price:', error);
+                
+                // Show fallback price in case of API error
+                const solPriceElement = document.getElementById('solPrice');
+                if (solPriceElement) {
+                    solPriceElement.innerHTML = `
+                        <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--accent);">$${solPrice.toFixed(2)}</div>
+                        <div style="font-size: var(--text-xs); color: var(--warning-text, #d97706); margin-top: 2px;">
+                            ⚠ Cached price
+                        </div>
+                    `;
+                }
+                
+                // Show notification about price fetch error
+                setTimeout(() => {
+                    showNotification('Unable to fetch live SOL price. Using cached value.', 'warning');
+                }, 2000);
+            }
+        }
         
         function calculateTokensFromSOL(solAmount) {
             const usdValue = solAmount * solPrice; // Convert SOL to USD
@@ -446,7 +533,7 @@
             
             if (solAmount > 0) {
                 const tokens = calculateTokensFromSOL(solAmount);
-                const usdValue = solAmount * solPrice2;
+                const usdValue = solAmount * solPrice;
                 
                 tokenOutput.value = `${tokens.toLocaleString()} ARKLY`;
                 
@@ -528,6 +615,12 @@
         
         // Initialize calculator on page load
         document.addEventListener('DOMContentLoaded', function() {
+            // Fetch SOL price immediately
+            fetchSOLPrice();
+            
+            // Set up periodic price updates (every 30 seconds)
+            setInterval(fetchSOLPrice, 30000);
+            
             // Add event listeners for calculator
             const solInput = document.getElementById('solInput');
             if (solInput) {
@@ -537,8 +630,8 @@
             
             // Show welcome message
             setTimeout(() => {
-                showNotification('Welcome to the ARKLY token calculator! Enter a SOL amount to see your potential token purchase.', 'info');
-            }, 1000);
+                showNotification('Welcome to the ARKLY token calculator! Live SOL price updates every 30 seconds.', 'success');
+            }, 2000);
         });
     </script>
 </body>
