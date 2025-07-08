@@ -53,6 +53,11 @@
         gap: var(--spacing-6);
         text-align: center;
     }
+    
+    /* Header et navigation mobile */
+    .arkly-logo-img {
+        height: 10px; /* Réduction de 32px à 20px sur mobile */
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
