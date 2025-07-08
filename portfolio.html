@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Management - arkly.capital</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Manage your tokenized real estate portfolio with advanced tools and analytics on Solana.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    
+    <!-- Coming Soon Overlay Styles -->
+    <style>
+        .portfolio-blur {
+            filter: blur(6px);
+            pointer-events: none;
+            transition: filter 0.3s ease;
+        }
+        
+        .coming-soon-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            backdrop-filter: blur(4px);
+        }
+        
+        .coming-soon-message {
+            text-align: center;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem 4rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            margin: 0 2rem;
+        }
+        
+        .coming-soon-message h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .coming-soon-message p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .coming-soon-cta {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .coming-soon-cta:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .coming-soon-message {
+                padding: 2rem;
+                margin: 0 1rem;
+            }
+            
+            .coming-soon-message h1 {
+                font-size: 2.5rem;
+            }
+            
+            .coming-soon-message p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Coming Soon Overlay -->
+    <div class="coming-soon-overlay">
+        <div class="coming-soon-message">
+            <h1>Coming Soon</h1>
+            <p>Our advanced portfolio management tools are currently under development. Access the presale now to secure your position.</p>
+            <a href="app.html" class="coming-soon-cta">Join Presale</a>
+        </div>
+    </div>
+
+    <!-- Blurred Portfolio Content -->
+    <div class="portfolio-blur">
+        <!-- Header Navigation -->
+        <header class="arkly-header">
+        <nav class="arkly-nav">
+            <a href="index.html" class="arkly-logo">
+                <img src="arkly.capital_files/Arkly.png" alt="Arkly" class="arkly-logo-img">
+            </a>
+            <div class="arkly-nav-links">
+                <a href="about.html" class="arkly-nav-link">About</a>
+                <a href="features.html" class="arkly-nav-link">Features</a>
+                <a href="insights.html" class="arkly-nav-link">Insights</a>
+                <a href="security.html" class="arkly-nav-link">Security</a>
+                <a href="contact.html" class="arkly-nav-link">Contact</a>
+                <a href="app.html" class="arkly-btn arkly-btn-primary arkly-nav-cta">Join Presale</a>
+            </div>
+            <button class="arkly-mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Portfolio Content -->
+    <main class="arkly-main" style="padding-top: 80px;">
+        
+        <!-- Portfolio Header -->
+        <section style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-primary); padding: var(--spacing-8) 0;">
+            <div class="arkly-container">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-6);">
+                    <div>
+                        <h1 style="margin-bottom: var(--spacing-2);">Portfolio Management</h1>
+                        <p style="color: var(--text-secondary);">Advanced tools for managing your tokenized real estate investments</p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-4);">
+                        <div style="padding: var(--spacing-2) var(--spacing-4); background: var(--accent); border-radius: var(--radius-md); color: white; font-size: var(--text-sm); font-weight: 500;">
+                            ✓ Connected
+                        </div>
+                        <div style="font-family: monospace; font-size: var(--text-sm); color: var(--text-secondary);">
+                            7XBo...kZ9P
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Tools -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-4);">
+                    <div style="background: var(--bg-primary); padding: var(--spacing-4); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <div style="color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--spacing-1);">Auto-Rebalancing</div>
+                        <div style="font-size: var(--text-2xl); font-weight: 700; color: var(--text-primary);">Enabled</div>
+                        <div style="color: #10B981; font-size: var(--text-sm); margin-top: var(--spacing-1);">Risk Level: Conservative</div>
+                    </div>
+                    <div style="background: var(--bg-primary); padding: var(--spacing-4); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <div style="color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--spacing-1);">Yield Optimization</div>
+                        <div style="font-size: var(--text-2xl); font-weight: 700; color: var(--text-primary);">Active</div>
+                        <div style="color: var(--text-secondary); font-size: var(--text-sm); margin-top: var(--spacing-1);">Next optimization in 3d</div>
+                    </div>
+                    <div style="background: var(--bg-primary); padding: var(--spacing-4); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <div style="color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--spacing-1);">Tax Optimization</div>
+                        <div style="font-size: var(--text-2xl); font-weight: 700; color: var(--text-primary);">$1,247</div>
+                        <div style="color: #10B981; font-size: var(--text-sm); margin-top: var(--spacing-1);">Saved this year</div>
+                    </div>
+                    <div style="background: var(--bg-primary); padding: var(--spacing-4); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <div style="color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--spacing-1);">Risk Score</div>
+                        <div style="font-size: var(--text-2xl); font-weight: 700; color: var(--text-primary);">6.2/10</div>
+                        <div style="color: var(--text-secondary); font-size: var(--text-sm); margin-top: var(--spacing-1);">Moderate risk</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Allocation -->
+        <section style="padding: var(--spacing-12) 0;">
+            <div class="arkly-container">
+                <h2 style="margin-bottom: var(--spacing-8);">Asset Allocation</h2>
+                
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-8);">
+                    
+                    <!-- Allocation Chart -->
+                    <div style="background: var(--bg-primary); padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-6);">
+                            <h3>Geographic Distribution</h3>
+                            <div style="display: flex; gap: var(--spacing-2);">
+                                <button style="padding: var(--spacing-1) var(--spacing-3); background: var(--accent); color: white; border: none; border-radius: var(--radius-sm); font-size: var(--text-sm);">By Location</button>
+                                <button style="padding: var(--spacing-1) var(--spacing-3); background: transparent; color: var(--text-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-sm); font-size: var(--text-sm);">By Type</button>
+                            </div>
+                        </div>
+                        <div style="height: 300px; background: var(--bg-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                            Interactive Portfolio Map
+                        </div>
+                    </div>
+
+                    <!-- Allocation Details -->
+                    <div style="background: var(--bg-primary); padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <h3 style="margin-bottom: var(--spacing-4);">Target vs. Current</h3>
+                        
+                        <!-- Residential -->
+                        <div style="margin-bottom: var(--spacing-4);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-2);">
+                                <span style="color: var(--text-primary);">Residential</span>
+                                <span style="color: var(--text-secondary);">45% | Target: 40%</span>
+                            </div>
+                            <div style="height: 8px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden;">
+                                <div style="width: 45%; height: 100%; background: #8B5CF6;"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Commercial -->
+                        <div style="margin-bottom: var(--spacing-4);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-2);">
+                                <span style="color: var(--text-primary);">Commercial</span>
+                                <span style="color: var(--text-secondary);">30% | Target: 35%</span>
+                            </div>
+                            <div style="height: 8px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden;">
+                                <div style="width: 30%; height: 100%; background: #10B981;"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Industrial -->
+                        <div style="margin-bottom: var(--spacing-4);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-2);">
+                                <span style="color: var(--text-primary);">Industrial</span>
+                                <span style="color: var(--text-secondary);">20% | Target: 20%</span>
+                            </div>
+                            <div style="height: 8px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden;">
+                                <div style="width: 20%; height: 100%; background: #F59E0B;"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Retail -->
+                        <div style="margin-bottom: var(--spacing-4);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-2);">
+                                <span style="color: var(--text-primary);">Retail</span>
+                                <span style="color: var(--text-secondary);">5% | Target: 5%</span>
+                            </div>
+                            <div style="height: 8px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden;">
+                                <div style="width: 5%; height: 100%; background: #EC4899;"></div>
+                            </div>
+                        </div>
+                        
+                        <button style="width: 100%; padding: var(--spacing-3); background: var(--accent); color: white; border: none; border-radius: var(--radius-md); font-weight: 500; margin-top: var(--spacing-4);">
+                            Rebalance Portfolio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Analytics -->
+        <section style="padding: var(--spacing-12) 0; background: var(--bg-secondary);">
+            <div class="arkly-container">
+                <h2 style="margin-bottom: var(--spacing-8);">Analytics & Optimization</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--spacing-6);">
+                    
+                    <!-- Risk Analysis -->
+                    <div style="background: var(--bg-primary); padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <h3 style="margin-bottom: var(--spacing-4);">Risk Analysis</h3>
+                        <div style="height: 200px; background: var(--bg-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+                            Risk Metrics Chart
+                        </div>
+                        <div style="display: flex; justify-content: between; align-items: center;">
+                            <div>
+                                <div style="font-size: var(--text-sm); color: var(--text-secondary);">Portfolio Beta</div>
+                                <div style="font-weight: 600;">0.78</div>
+                            </div>
+                            <div>
+                                <div style="font-size: var(--text-sm); color: var(--text-secondary);">Sharpe Ratio</div>
+                                <div style="font-weight: 600;">1.24</div>
+                            </div>
+                            <div>
+                                <div style="font-size: var(--text-sm); color: var(--text-secondary);">Max Drawdown</div>
+                                <div style="font-weight: 600;">-8.2%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yield Forecasting -->
+                    <div style="background: var(--bg-primary); padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <h3 style="margin-bottom: var(--spacing-4);">Yield Forecasting</h3>
+                        <div style="height: 200px; background: var(--bg-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+                            Yield Projection Chart
+                        </div>
+                        <div style="display: flex; justify-content: between; align-items: center;">
+                            <div>
+                                <div style="font-size: var(--text-sm); color: var(--text-secondary);">12M Forecast</div>
+                                <div style="font-weight: 600; color: #10B981;">+$1,847</div>
+                            </div>
+                            <div>
+                                <div style="font-size: var(--text-sm); color: var(--text-secondary);">Confidence</div>
+                                <div style="font-weight: 600;">87%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tax Optimization -->
+                    <div style="background: var(--bg-primary); padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <h3 style="margin-bottom: var(--spacing-4);">Tax Optimization</h3>
+                        <div style="margin-bottom: var(--spacing-4);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-2);">
+                                <span>Tax Loss Harvesting</span>
+                                <span style="color: #10B981;">Active</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-2);">
+                                <span>Asset Location</span>
+                                <span style="color: #10B981;">Optimized</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-2);">
+                                <span>Withdrawal Strategy</span>
+                                <span style="color: #F59E0B;">Needs Review</span>
+                            </div>
+                        </div>
+                        <div style="padding: var(--spacing-3); background: rgba(16, 185, 129, 0.1); border-radius: var(--radius-md); border: 1px solid rgba(16, 185, 129, 0.2);">
+                            <div style="color: #10B981; font-weight: 500; margin-bottom: var(--spacing-1);">Tax Savings Opportunity</div>
+                            <div style="font-size: var(--text-sm); color: var(--text-secondary);">Rebalancing could save ~$340 in taxes this year</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Actions -->
+        <section style="padding: var(--spacing-12) 0;">
+            <div class="arkly-container">
+                <h2 style="margin-bottom: var(--spacing-8);">Portfolio Actions</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-6);">
+                    
+                    <!-- Quick Actions -->
+                    <div style="background: var(--bg-primary); padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <h3 style="margin-bottom: var(--spacing-4);">Quick Actions</h3>
+                        <div style="display: flex; flex-direction: column; gap: var(--spacing-3);">
+                            <button style="padding: var(--spacing-3); background: var(--accent); color: white; border: none; border-radius: var(--radius-md); font-weight: 500; text-align: left;">
+                                🔄 Auto-Rebalance Now
+                            </button>
+                            <button style="padding: var(--spacing-3); background: transparent; color: var(--text-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); font-weight: 500; text-align: left;">
+                                📊 Generate Tax Report
+                            </button>
+                            <button style="padding: var(--spacing-3); background: transparent; color: var(--text-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); font-weight: 500; text-align: left;">
+                                💰 Harvest Tax Losses
+                            </button>
+                            <button style="padding: var(--spacing-3); background: transparent; color: var(--text-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); font-weight: 500; text-align: left;">
+                                📈 Update Risk Profile
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Alerts & Recommendations -->
+                    <div style="background: var(--bg-primary); padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <h3 style="margin-bottom: var(--spacing-4);">Alerts & Recommendations</h3>
+                        <div style="display: flex; flex-direction: column; gap: var(--spacing-3);">
+                            <div style="padding: var(--spacing-3); background: rgba(245, 158, 11, 0.1); border-radius: var(--radius-md); border: 1px solid rgba(245, 158, 11, 0.2);">
+                                <div style="color: #F59E0B; font-weight: 500; margin-bottom: var(--spacing-1);">Rebalancing Needed</div>
+                                <div style="font-size: var(--text-sm); color: var(--text-secondary);">Your allocation has drifted 5% from target</div>
+                            </div>
+                            <div style="padding: var(--spacing-3); background: rgba(16, 185, 129, 0.1); border-radius: var(--radius-md); border: 1px solid rgba(16, 185, 129, 0.2);">
+                                <div style="color: #10B981; font-weight: 500; margin-bottom: var(--spacing-1);">New Opportunity</div>
+                                <div style="font-size: var(--text-sm); color: var(--text-secondary);">High-yield property available in Nashville</div>
+                            </div>
+                            <div style="padding: var(--spacing-3); background: rgba(59, 130, 246, 0.1); border-radius: var(--radius-md); border: 1px solid rgba(59, 130, 246, 0.2);">
+                                <div style="color: #3B82F6; font-weight: 500; margin-bottom: var(--spacing-1);">Performance Update</div>
+                                <div style="font-size: var(--text-sm); color: var(--text-secondary);">Your portfolio outperformed market by 3.2%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strategy Settings -->
+                    <div style="background: var(--bg-primary); padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+                        <h3 style="margin-bottom: var(--spacing-4);">Strategy Settings</h3>
+                        <div style="display: flex; flex-direction: column; gap: var(--spacing-4);">
+                            <div>
+                                <label style="display: block; margin-bottom: var(--spacing-2); font-weight: 500;">Risk Tolerance</label>
+                                <select style="width: 100%; padding: var(--spacing-2); border: 1px solid var(--border-primary); border-radius: var(--radius-md); background: var(--bg-secondary);">
+                                    <option>Conservative</option>
+                                    <option>Moderate</option>
+                                    <option>Aggressive</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: var(--spacing-2); font-weight: 500;">Rebalancing Frequency</label>
+                                <select style="width: 100%; padding: var(--spacing-2); border: 1px solid var(--border-primary); border-radius: var(--radius-md); background: var(--bg-secondary);">
+                                    <option>Monthly</option>
+                                    <option>Quarterly</option>
+                                    <option>Semi-Annual</option>
+                                    <option>Annual</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: flex; align-items: center; gap: var(--spacing-2); margin-bottom: var(--spacing-2);">
+                                    <input type="checkbox" checked style="margin: 0;">
+                                    <span>Enable Tax Loss Harvesting</span>
+                                </label>
+                                <label style="display: flex; align-items: center; gap: var(--spacing-2);">
+                                    <input type="checkbox" checked style="margin: 0;">
+                                    <span>Auto-reinvest Dividends</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="arkly-footer">
+        <div class="arkly-container">
+            <div class="arkly-footer-content">
+                <div class="arkly-footer-section">
+                    <h4>arkly.capital</h4>
+                    <p>Bridging real estate with decentralized finance through tokenized yield opportunities on Solana.</p>
+                    <div class="arkly-social-links">
+                        <a href="https://x.com/arklycap?s=21" target="_blank" class="arkly-social-link" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/arklycap" target="_blank" class="arkly-social-link" aria-label="Telegram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="arkly-social-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="arkly-footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="arkly-footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="app.html">Join Presale</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+                
+                <div class="arkly-footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="legal.html">Legal</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="arkly-footer-bottom">
+                <p>&copy; 2025 arkly.capital. All rights reserved.</p>
+                <p>Investments involve risk. This platform is experimental and designed for sophisticated users familiar with DeFi protocols.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    </div> <!-- End portfolio-blur -->
+</body>
+</html>
