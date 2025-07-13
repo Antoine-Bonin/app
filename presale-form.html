@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presale Application - arkly.capital</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Apply for the Arkly Capital presale - Secure your allocation in tokenized real estate investments.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    
+    <!-- Form-specific styles -->
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: var(--spacing-8);
+            background: var(--bg-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-xl);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: var(--spacing-6);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: var(--spacing-2);
+            font-weight: var(--font-medium);
+            color: var(--text-primary);
+        }
+        
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: var(--spacing-3);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-md);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: var(--text-base);
+            transition: border-color 0.2s ease;
+        }
+        
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .form-note {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-top: var(--spacing-1);
+        }
+        
+        .form-required {
+            color: #dc2626;
+        }
+        
+        .coming-soon-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            backdrop-filter: blur(4px);
+        }
+        
+        .coming-soon-message {
+            text-align: center;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem 4rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            margin: 0 2rem;
+        }
+        
+        .coming-soon-message h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .coming-soon-message p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .coming-soon-cta {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .coming-soon-cta:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .coming-soon-message {
+                padding: 2rem;
+                margin: 0 1rem;
+            }
+            
+            .coming-soon-message h1 {
+                font-size: 2.5rem;
+            }
+            
+            .coming-soon-message p {
+                font-size: 1rem;
+            }
+        }
+        
+        .form-blur {
+            filter: blur(6px);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Coming Soon Overlay -->
+    <div class="coming-soon-overlay">
+        <div class="coming-soon-message">
+            <h1>Coming Soon</h1>
+            <p>The presale application form is currently not accessible. For now, please join our waitlist to secure priority access.</p>
+            <a href="app.html" class="arkly-btn arkly-btn-primary">Back to Presale</a>
+        </div>
+    </div>
+
+    <!-- Blurred Form Content -->
+    <div class="form-blur">
+        <!-- Header Navigation -->
+        <header class="arkly-header">
+            <nav class="arkly-nav">
+                <a href="index.html" class="arkly-logo">
+                    <img src="arkly.capital_files/Arkly.png" alt="Arkly" class="arkly-logo-img">
+                </a>
+                <div class="arkly-nav-links">
+                    <a href="about.html" class="arkly-nav-link">About</a>
+                    <a href="features.html" class="arkly-nav-link">Features</a>
+                    <a href="insights.html" class="arkly-nav-link">Insights</a>
+                    <a href="security.html" class="arkly-nav-link">Security</a>
+                    <a href="contact.html" class="arkly-nav-link">Contact</a>
+                    <a href="app.html" class="arkly-btn arkly-btn-primary arkly-nav-cta">Presale</a>
+                </div>
+                <button class="arkly-mobile-menu-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="arkly-main" style="padding: var(--spacing-12) 0;">
+            <div class="arkly-container">
+                <!-- Page Header -->
+                <div style="text-align: center; margin-bottom: var(--spacing-12);">
+                    <div class="arkly-badge arkly-badge-accent">Presale Application</div>
+                    <h1 style="margin: var(--spacing-4) 0;">Apply for Presale Access</h1>
+                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                        Secure your allocation in the Arkly Capital presale. Complete the form below to apply for priority access to tokenized real estate investments.
+                    </p>
+                </div>
+
+                <!-- Application Form -->
+                <div class="form-container">
+                    <form id="presaleForm">
+                        <!-- Contact Information -->
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address <span class="form-required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <div class="form-note">We'll use this to contact you about your application status.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="telegram">Telegram Handle</label>
+                            <input type="text" id="telegram" name="telegram" class="form-input" placeholder="@yourusername">
+                            <div class="form-note">Optional - for priority support and updates.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="twitter">Twitter Handle</label>
+                            <input type="text" id="twitter" name="twitter" class="form-input" placeholder="@yourusername">
+                            <div class="form-note">Optional - helps us identify community members.</div>
+                        </div>
+
+                        <!-- Investment Details -->
+                        <div class="form-group">
+                            <label class="form-label" for="allocation">Intended Allocation (USDC) <span class="form-required">*</span></label>
+                            <select id="allocation" name="allocation" class="form-select" required>
+                                <option value="">Select allocation range</option>
+                                <option value="350-1000">$350 - $1,000 (Tier 1: Early Backer)</option>
+                                <option value="1000-3000">$1,000 - $3,000 (Tier 2: Growth Partner)</option>
+                                <option value="3000-10000">$3,000 - $10,000 (Tier 3: Strategic Whale)</option>
+                                <option value="10000+">$10,000+ (Contact for special allocation)</option>
+                            </select>
+                            <div class="form-note">Higher allocations receive priority processing and additional benefits. Min: $350, Max: $10,000.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="wallet">Solana Wallet Address <span class="form-required">*</span></label>
+                            <input type="text" id="wallet" name="wallet" class="form-input" placeholder="Your Solana wallet address (for USDC payment)" required>
+                            <div class="form-note">This wallet will be used for USDC payment and receiving ARKLY tokens.</div>
+                        </div>
+
+                        <!-- Investment Experience -->
+                        <div class="form-group">
+                            <label class="form-label" for="experience">Investment Experience</label>
+                            <select id="experience" name="experience" class="form-select">
+                                <option value="">Select your experience level</option>
+                                <option value="beginner">Beginner (< 1 year)</option>
+                                <option value="intermediate">Intermediate (1-3 years)</option>
+                                <option value="advanced">Advanced (3+ years)</option>
+                                <option value="professional">Professional/Institutional</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="defi_experience">DeFi Experience</label>
+                            <select id="defi_experience" name="defi_experience" class="form-select">
+                                <option value="">Select your DeFi experience</option>
+                                <option value="none">New to DeFi</option>
+                                <option value="basic">Basic (swapping, simple protocols)</option>
+                                <option value="intermediate">Intermediate (yield farming, LP)</option>
+                                <option value="advanced">Advanced (protocol interaction, governance)</option>
+                            </select>
+                        </div>
+
+                        <!-- Referral -->
+                        <div class="form-group">
+                            <label class="form-label" for="referral">How did you hear about Arkly?</label>
+                            <select id="referral" name="referral" class="form-select">
+                                <option value="">Select source</option>
+                                <option value="twitter">Twitter/X</option>
+                                <option value="telegram">Telegram</option>
+                                <option value="friend">Friend/Referral</option>
+                                <option value="defi_community">DeFi Community</option>
+                                <option value="solana_community">Solana Community</option>
+                                <option value="realestate_community">Real Estate Community</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-group">
+                            <label class="form-label" for="additional_info">Additional Information</label>
+                            <textarea id="additional_info" name="additional_info" class="form-textarea" placeholder="Tell us about your interest in tokenized real estate, your investment goals, or any questions you have..."></textarea>
+                            <div class="form-note">Optional - help us understand your investment thesis and goals.</div>
+                        </div>
+
+                        <!-- Terms Agreement -->
+                        <div class="form-group">
+                            <label style="display: flex; align-items: flex-start; gap: var(--spacing-2); cursor: pointer;">
+                                <input type="checkbox" id="terms" name="terms" required style="margin-top: 2px;">
+                                <span style="font-size: var(--text-sm); color: var(--text-secondary);">
+                                    I understand the risks of investing in tokenized real estate and DeFi protocols. I have read and agree to the 
+                                    <a href="terms.html" style="color: var(--accent);">Terms of Service</a> and 
+                                    <a href="privacy.html" style="color: var(--accent);">Privacy Policy</a>.
+                                </span>
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="arkly-btn arkly-btn-primary" style="width: 100%; padding: var(--spacing-4);">
+                            Submit Presale Application
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Additional Information -->
+                <div style="text-align: center; margin-top: var(--spacing-12); max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <div style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-lg); padding: var(--spacing-6);">
+                        <h3 style="margin-bottom: var(--spacing-4);">What Happens Next?</h3>
+                        <ul style="text-align: left; color: var(--text-secondary);">
+                            <li style="margin-bottom: var(--spacing-2);">📝 <strong>Review Process:</strong> Our team will review your application within 24-48 hours</li>
+                            <li style="margin-bottom: var(--spacing-2);">📧 <strong>Confirmation:</strong> You'll receive an email with your allocation status</li>
+                            <li style="margin-bottom: var(--spacing-2);">💎 <strong>Priority Access:</strong> Approved applicants get early access to the presale</li>
+                            <li>🚀 <strong>Token Distribution:</strong> ARKLY tokens will be distributed immediately after purchase</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="arkly-footer">
+            <div class="arkly-container">
+                <div class="arkly-footer-content">
+                    <div class="arkly-footer-section">
+                        <h4>arkly.capital</h4>
+                        <p>Bridging real estate with decentralized finance through tokenized yield opportunities on Solana.</p>
+                        <div class="arkly-social-links">
+                            <a href="https://x.com/arklycap?s=21" target="_blank" class="arkly-social-link" aria-label="Twitter">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                                </svg>
+                            </a>
+                            <a href="https://t.me/arklycap" target="_blank" class="arkly-social-link" aria-label="Telegram">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="arkly-footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="arkly-footer-section">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="app.html">Presale</a></li>
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="security.html">Security</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="arkly-footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="insights.html">Insights</a></li>
+                            <li><a href="legal.html">Legal</a></li>
+                            <li><a href="privacy.html">Privacy</a></li>
+                            <li><a href="terms.html">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="arkly-footer-bottom">
+                    <p>&copy; 2025 arkly.capital. All rights reserved.</p>
+                    <p>Investments involve risk. This platform is experimental and designed for sophisticated users familiar with DeFi protocols.</p>
+                </div>
+            </div>
+        </footer>
+    </div> <!-- End form-blur -->
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    <script>
+        // Form submission handler (for future implementation)
+        document.getElementById('presaleForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Presale application submitted:', data);
+            
+            // Show confirmation message
+            alert('Application submitted successfully! You will receive a confirmation email within 24-48 hours.');
+            
+            // TODO: Send to backend API or form service
+            // fetch('/api/presale-application', { method: 'POST', body: formData })
+        });
+    </script>
+</body>
+</html>
