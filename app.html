@@ -113,6 +113,65 @@
             position: relative;
             filter: blur(0.8px);
         }
+        
+        /* Désactiver complètement les effets hover sur le bouton Apply for Presale */
+        #applyPresaleBtn:hover,
+        #applyPresaleBtn:focus,
+        #applyPresaleBtn:active,
+        #applyPresaleBtn:focus-visible {
+            filter: blur(0.8px) !important;
+            transform: none !important;
+            box-shadow: none !important;
+            background: var(--accent) !important;
+            border-color: var(--accent) !important;
+            color: white !important;
+            opacity: 1 !important;
+            transition: none !important;
+            outline: none !important;
+            text-shadow: none !important;
+            background-image: none !important;
+            background-size: initial !important;
+            animation: none !important;
+        }
+        
+        /* Supprimer tous les effets visuels possibles */
+        #applyPresaleBtn {
+            position: relative;
+            filter: blur(0.8px);
+            transition: none !important;
+            animation: none !important;
+            background-image: none !important;
+        }
+        @media (max-width: 768px) {
+            .arkly-btn {
+                max-width: 280px;
+                width: auto;
+                margin: 0 auto;
+                display: inline-flex !important;
+            }
+            
+            .arkly-nav-cta {
+                max-width: 140px;
+                font-size: var(--text-sm);
+                padding: var(--spacing-2) var(--spacing-3);
+            }
+            
+            #applyPresaleBtn,
+            #joinWaitlistBtn,
+            .arkly-btn-primary,
+            .arkly-btn-secondary {
+                max-width: 200px;
+                width: auto;
+                margin: var(--spacing-2) auto;
+            }
+            
+            /* Target all Join Waitlist buttons specifically */
+            button[onclick*="joinWaitlist"],
+            a[href*="waitlist"],
+            .arkly-nav-cta {
+                max-width: 180px;
+            }
+        }
     </style>
 </head>
 <body class="app-container">
@@ -128,7 +187,7 @@
                 <a href="insights.html" class="arkly-nav-link">Insights</a>
                 <a href="security.html" class="arkly-nav-link">Security</a>
                 <a href="contact.html" class="arkly-nav-link">Contact</a>
-                <a href="#" class="arkly-btn arkly-btn-primary arkly-nav-cta">join Waitlist</a>
+                <a href="#" class="arkly-btn arkly-btn-primary arkly-nav-cta">Join Waitlist</a>
             </div>
             <button class="arkly-mobile-menu-toggle" aria-label="Toggle navigation">
                 <span></span>

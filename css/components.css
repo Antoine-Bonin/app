@@ -102,8 +102,7 @@ p {
 }
 
 .arkly-logo:hover::after {
-    width: 170px;
- /* Largeur augmentée pour un effet plus long */
+    width: 116px; /* Largeur réduite pour mieux correspondre à la taille du logo */
 }
 
 /* Enhanced logo sharpness for hero section */

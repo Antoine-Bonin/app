@@ -14,14 +14,67 @@
     }
     
     .arkly-hero h1 {
-        font-size: var(--text-3xl);
+        font-size: var(--text-2xl); /* Réduit de text-3xl à text-2xl pour mobile */
         line-height: var(--leading-tight);
     }
     
     .subtitle {
-        font-size: var(--text-lg);
+        font-size: var(--text-sm) !important; /* Réduit de text-base à text-sm pour mobile */
+        line-height: 1.4;
+        margin-bottom: var(--spacing-4);
     }
     
+    /* Tailles optimisées sur mobile pour index.html */
+    .arkly-logo-img {
+        max-height: 14px !important; /* Plus petit sur mobile - réduit de 28px à 16px */
+        width: auto;
+    }
+    
+    /* Centrage des headers de contenu sur mobile (pas le logo de navigation) */
+    /* Headers de pages comme About, Features, Insights, etc. */
+    .arkly-page-header,
+    .arkly-hero-content,
+    .arkly-features-header,
+    .arkly-section-header {
+        text-align: center;
+    }
+    
+    /* Titres principaux des pages */
+    .arkly-page-header h1,
+    .arkly-features-header h2,
+    .arkly-section-header h2 {
+        text-align: center;
+        margin: 0 auto var(--spacing-6); /* Ajout d'espacement en bas */
+        font-size: var(--text-2xl) !important; /* Réduit la taille sur mobile */
+    }
+    
+    /* Descriptions sous les titres */
+    .arkly-page-header p,
+    .arkly-features-header p,
+    .arkly-section-header p {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 90%;
+        font-size: var(--text-sm) !important; /* Réduit la taille de texte */
+        margin-top: var(--spacing-4); /* Ajoute de l'espace au-dessus */
+    }
+    
+    /* Logo principal dans le hero - légèrement plus grand */
+    .arkly-hero-content img[alt="arkly.capital"] {
+        max-height: 36px !important; /* Légèrement plus grand: 36px au lieu de 32px */
+        width: auto;
+    }
+    
+    /* Titres et textes optimisés pour mobile */
+    .arkly-features-header h2 {
+        font-size: var(--text-2xl) !important; /* Réduit de text-3xl à text-2xl pour mobile */
+        line-height: 1.3;
+    }
+    
+    .arkly-features-header p {
+        font-size: var(--text-sm) !important; /* Réduit de text-base à text-sm */
+    }
+
     .arkly-features-grid {
         gap: var(--spacing-6);
     }
@@ -47,6 +100,34 @@
     .arkly-btn {
         width: 100%;
         justify-content: center;
+        max-width: 280px; /* Limite la largeur maximale */
+        margin: 0 auto; /* Centre le bouton */
+    }
+    
+    /* Taille spécifique pour les boutons de navigation */
+    .arkly-nav-cta {
+        max-width: 140px;
+        font-size: var(--text-sm);
+        padding: var(--spacing-2) var(--spacing-3);
+        width: auto;
+    }
+    
+    /* Taille spécifique pour les boutons principaux */
+    .arkly-btn-primary,
+    .arkly-btn-secondary,
+    #applyPresaleBtn,
+    #joinWaitlistBtn {
+        max-width: 200px;
+        width: auto;
+        margin: var(--spacing-2) auto;
+    }
+    
+    /* Boutons Join Waitlist spécifiques */
+    button[onclick*="joinWaitlist"],
+    a[href*="waitlist"]:not(.arkly-nav-cta),
+    .arkly-hero .arkly-btn {
+        max-width: 220px;
+        width: auto;
     }
     
     .arkly-footer-content {
@@ -107,6 +188,714 @@
     .arkly-mobile-menu-toggle--open span:last-child {
         transform: rotate(-45deg) translate(7px, -6px);
     }
+    
+    /* Réduction générale des tailles de texte sur mobile */
+    h1 {
+        font-size: var(--text-2xl) !important;
+    }
+    
+    h2 {
+        font-size: var(--text-xl) !important;
+    }
+    
+    h3 {
+        font-size: var(--text-lg) !important;
+    }
+    
+    p {
+        font-size: var(--text-sm) !important;
+        line-height: 1.5;
+    }
+    
+    /* Espacement spécifique pour les headers de page */
+    .arkly-page-header {
+        margin-bottom: var(--spacing-8);
+    }
+    
+    .arkly-page-header h1 {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    /* Réduction des padding et margins des blocs sur mobile */
+    .arkly-feature-card,
+    .arkly-stat-item,
+    .arkly-security-pillar,
+    .arkly-cert-card,
+    .arkly-bounty-tier,
+    .arkly-insight-card,
+    .arkly-report-card,
+    .arkly-media-item,
+    .arkly-contact-method,
+    .arkly-legal-content,
+    .arkly-security-category,
+    .arkly-podcast-item,
+    div[style*="padding: var(--spacing-8)"],
+    div[style*="padding: var(--spacing-10)"] {
+        padding: var(--spacing-4) !important;
+    }
+    
+    /* Réduction des gaps dans les grilles */
+    .arkly-features-grid,
+    .arkly-stats-grid,
+    .arkly-security-grid,
+    .arkly-certifications-grid,
+    .arkly-insights-grid,
+    .arkly-reports-grid,
+    .arkly-media-grid,
+    .arkly-contact-cards,
+    div[style*="gap: var(--spacing-8)"],
+    div[style*="gap: var(--spacing-10)"],
+    div[style*="gap: var(--spacing-12)"] {
+        gap: var(--spacing-4) !important;
+    }
+    
+    /* Réduction des marges des sections */
+    section {
+        padding: var(--spacing-8) 0 !important;
+    }
+    
+    /* Réduction des marges internes des blocs */
+    .arkly-feature-icon,
+    .arkly-security-icon,
+    .arkly-cert-logo {
+        width: 32px !important;
+        height: 32px !important;
+        margin-bottom: var(--spacing-3) !important;
+    }
+    
+    /* Réduction des espacements dans les headers */
+    .arkly-page-header,
+    .arkly-features-header,
+    .arkly-section-header {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    /* Réduction des espacements spécifiques aux inline styles */
+    div[style*="margin-bottom: var(--spacing-12)"] {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    div[style*="margin-bottom: var(--spacing-10)"] {
+        margin-bottom: var(--spacing-5) !important;
+    }
+    
+    div[style*="margin-bottom: var(--spacing-8)"] {
+        margin-bottom: var(--spacing-4) !important;
+    }
+    
+    /* Ajustements pour les grilles avec minmax */
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"],
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Réduction de la hauteur des icônes et éléments décoratifs */
+    .arkly-divider {
+        margin: var(--spacing-4) 0 !important;
+    }
+    
+    /* Optimisation des cartes avec style inline */
+    div[style*="border-radius: 12px"] {
+        border-radius: 8px !important;
+        padding: var(--spacing-4) !important;
+    }
+
+    /* Réduction générale des tailles de texte sur mobile */
+    h1 {
+        font-size: var(--text-2xl) !important;
+    }
+    
+    h2 {
+        font-size: var(--text-xl) !important;
+    }
+    
+    h3 {
+        font-size: var(--text-lg) !important;
+    }
+    
+    p {
+        font-size: var(--text-sm) !important;
+        line-height: 1.5;
+    }
+    
+    /* Espacement spécifique pour les headers de page */
+    .arkly-page-header {
+        margin-bottom: var(--spacing-8);
+    }
+    
+    .arkly-page-header h1 {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    /* Ajustements spécifiques des composants Arkly sur mobile */
+    .arkly-feature-card {
+        padding: var(--spacing-4) !important;
+        border-radius: var(--radius-lg) !important;
+    }
+    
+    .arkly-feature-card h3 {
+        font-size: var(--text-base) !important;
+        margin-bottom: var(--spacing-2) !important;
+    }
+    
+    .arkly-feature-card p {
+        font-size: var(--text-xs) !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Réduction des stats */
+    .arkly-stat-item,
+    .arkly-stat-card {
+        padding: var(--spacing-4) !important;
+    }
+    
+    .arkly-stat-number {
+        font-size: var(--text-2xl) !important;
+    }
+    
+    .arkly-stat-label {
+        font-size: var(--text-xs) !important;
+    }
+    
+    /* Ajustements pour les sections spéciales */
+    .arkly-security-pillar,
+    .arkly-insight-card,
+    .arkly-report-card {
+        padding: var(--spacing-4) !important;
+        border-radius: var(--radius-md) !important;
+    }
+    
+    /* Réduction des icônes dans tous les contextes */
+    .arkly-feature-icon,
+    .arkly-security-icon {
+        width: 32px !important;
+        height: 32px !important;
+        margin-bottom: var(--spacing-3) !important;
+    }
+    
+    /* Optimisation des badges et tags */
+    .arkly-badge,
+    .arkly-tag,
+    .arkly-research-category,
+    .arkly-insight-category {
+        font-size: var(--text-xs) !important;
+        padding: var(--spacing-1) var(--spacing-2) !important;
+    }
+    
+    /* Réduction des dividers et espacements décoratifs */
+    .arkly-divider {
+        margin: var(--spacing-3) 0 !important;
+    }
+    
+    .arkly-divider-vertical {
+        height: 1rem !important;
+        margin: 0 var(--spacing-2) !important;
+    }
+
+    .arkly-features-grid {
+        gap: var(--spacing-6);
+    }
+    
+    .arkly-feature-card {
+        padding: var(--spacing-6);
+    }
+    
+    .arkly-stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+        text-align: center;
+    }
+    
+    .arkly-stat-number {
+        font-size: var(--text-3xl);
+    }
+    
+    .arkly-cta-buttons {
+        width: 100%;
+    }
+    
+    .arkly-btn {
+        width: 100%;
+        justify-content: center;
+        max-width: 280px; /* Limite la largeur maximale */
+        margin: 0 auto; /* Centre le bouton */
+    }
+    
+    /* Taille spécifique pour les boutons de navigation */
+    .arkly-nav-cta {
+        max-width: 140px;
+        font-size: var(--text-sm);
+        padding: var(--spacing-2) var(--spacing-3);
+        width: auto;
+    }
+    
+    /* Taille spécifique pour les boutons principaux */
+    .arkly-btn-primary,
+    .arkly-btn-secondary,
+    #applyPresaleBtn,
+    #joinWaitlistBtn {
+        max-width: 200px;
+        width: auto;
+        margin: var(--spacing-2) auto;
+    }
+    
+    /* Boutons Join Waitlist spécifiques */
+    button[onclick*="joinWaitlist"],
+    a[href*="waitlist"]:not(.arkly-nav-cta),
+    .arkly-hero .arkly-btn {
+        max-width: 220px;
+        width: auto;
+    }
+    
+    .arkly-footer-content {
+        gap: var(--spacing-6);
+        text-align: center;
+    }
+    
+    /* Header et navigation mobile */
+    .arkly-logo-img {
+        height: 18px; /* Augmenté de 10px à 18px pour meilleure visibilité */
+    }
+    
+    /* Navigation mobile */
+    .arkly-nav-links {
+        display: none;
+        position: fixed;
+        top: 70px; /* Hauteur du header augmentée */
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        border-top: 1px solid var(--border-primary);
+        padding: var(--spacing-6);
+        z-index: 1000;
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .arkly-nav-links--open {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-4);
+    }
+    
+    .arkly-nav-link {
+        padding: var(--spacing-3) 0;
+        border-bottom: 1px solid var(--border-secondary);
+        text-align: center;
+        font-size: var(--text-base);
+    }
+    
+    .arkly-nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .arkly-nav-cta {
+        margin-top: var(--spacing-4);
+        text-align: center;
+    }
+    
+    /* Animation du bouton hamburger */
+    .arkly-mobile-menu-toggle--open span:first-child {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .arkly-mobile-menu-toggle--open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .arkly-mobile-menu-toggle--open span:last-child {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* Réduction générale des tailles de texte sur mobile */
+    h1 {
+        font-size: var(--text-2xl) !important;
+    }
+    
+    h2 {
+        font-size: var(--text-xl) !important;
+    }
+    
+    h3 {
+        font-size: var(--text-lg) !important;
+    }
+    
+    p {
+        font-size: var(--text-sm) !important;
+        line-height: 1.5;
+    }
+    
+    /* Espacement spécifique pour les headers de page */
+    .arkly-page-header {
+        margin-bottom: var(--spacing-8);
+    }
+    
+    .arkly-page-header h1 {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    /* Réduction des padding et margins des blocs sur mobile */
+    .arkly-feature-card,
+    .arkly-stat-item,
+    .arkly-security-pillar,
+    .arkly-cert-card,
+    .arkly-bounty-tier,
+    .arkly-insight-card,
+    .arkly-report-card,
+    .arkly-media-item,
+    .arkly-contact-method,
+    .arkly-legal-content,
+    .arkly-security-category,
+    .arkly-podcast-item,
+    div[style*="padding: var(--spacing-8)"],
+    div[style*="padding: var(--spacing-10)"] {
+        padding: var(--spacing-4) !important;
+    }
+    
+    /* Réduction des gaps dans les grilles */
+    .arkly-features-grid,
+    .arkly-stats-grid,
+    .arkly-security-grid,
+    .arkly-certifications-grid,
+    .arkly-insights-grid,
+    .arkly-reports-grid,
+    .arkly-media-grid,
+    .arkly-contact-cards,
+    div[style*="gap: var(--spacing-8)"],
+    div[style*="gap: var(--spacing-10)"],
+    div[style*="gap: var(--spacing-12)"] {
+        gap: var(--spacing-4) !important;
+    }
+    
+    /* Réduction des marges des sections */
+    section {
+        padding: var(--spacing-8) 0 !important;
+    }
+    
+    /* Réduction des marges internes des blocs */
+    .arkly-feature-icon,
+    .arkly-security-icon,
+    .arkly-cert-logo {
+        width: 32px !important;
+        height: 32px !important;
+        margin-bottom: var(--spacing-3) !important;
+    }
+    
+    /* Réduction des espacements dans les headers */
+    .arkly-page-header,
+    .arkly-features-header,
+    .arkly-section-header {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    /* Réduction des espacements spécifiques aux inline styles */
+    div[style*="margin-bottom: var(--spacing-12)"] {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    div[style*="margin-bottom: var(--spacing-10)"] {
+        margin-bottom: var(--spacing-5) !important;
+    }
+    
+    div[style*="margin-bottom: var(--spacing-8)"] {
+        margin-bottom: var(--spacing-4) !important;
+    }
+    
+    /* Ajustements pour les grilles avec minmax */
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"],
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Réduction de la hauteur des icônes et éléments décoratifs */
+    .arkly-divider {
+        margin: var(--spacing-4) 0 !important;
+    }
+    
+    /* Optimisation des cartes avec style inline */
+    div[style*="border-radius: 12px"] {
+        border-radius: 8px !important;
+        padding: var(--spacing-4) !important;
+    }
+
+    /* Réduction générale des tailles de texte sur mobile */
+    h1 {
+        font-size: var(--text-2xl) !important;
+    }
+    
+    h2 {
+        font-size: var(--text-xl) !important;
+    }
+    
+    h3 {
+        font-size: var(--text-lg) !important;
+    }
+    
+    p {
+        font-size: var(--text-sm) !important;
+        line-height: 1.5;
+    }
+    
+    /* Espacement spécifique pour les headers de page */
+    .arkly-page-header {
+        margin-bottom: var(--spacing-8);
+    }
+    
+    .arkly-page-header h1 {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    /* Ajustements spécifiques des composants Arkly sur mobile */
+    .arkly-feature-card {
+        padding: var(--spacing-4) !important;
+        border-radius: var(--radius-lg) !important;
+    }
+    
+    .arkly-feature-card h3 {
+        font-size: var(--text-base) !important;
+        margin-bottom: var(--spacing-2) !important;
+    }
+    
+    .arkly-feature-card p {
+        font-size: var(--text-xs) !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Réduction des stats */
+    .arkly-stat-item,
+    .arkly-stat-card {
+        padding: var(--spacing-4) !important;
+    }
+    
+    .arkly-stat-number {
+        font-size: var(--text-2xl) !important;
+    }
+    
+    .arkly-stat-label {
+        font-size: var(--text-xs) !important;
+    }
+    
+    /* Ajustements pour les sections spéciales */
+    .arkly-security-pillar,
+    .arkly-insight-card,
+    .arkly-report-card {
+        padding: var(--spacing-4) !important;
+        border-radius: var(--radius-md) !important;
+    }
+    
+    /* Réduction des icônes dans tous les contextes */
+    .arkly-feature-icon,
+    .arkly-security-icon {
+        width: 32px !important;
+        height: 32px !important;
+        margin-bottom: var(--spacing-3) !important;
+    }
+    
+    /* Optimisation des badges et tags */
+    .arkly-badge,
+    .arkly-tag,
+    .arkly-research-category,
+    .arkly-insight-category {
+        font-size: var(--text-xs) !important;
+        padding: var(--spacing-1) var(--spacing-2) !important;
+    }
+    
+    /* Réduction des dividers et espacements décoratifs */
+    .arkly-divider {
+        margin: var(--spacing-3) 0 !important;
+    }
+    
+    .arkly-divider-vertical {
+        height: 1rem !important;
+        margin: 0 var(--spacing-2) !important;
+    }
+
+    /* Ajustements des composants Arkly pour landscape phones */
+    .arkly-feature-card {
+        padding: var(--spacing-5) !important;
+        border-radius: var(--radius-lg) !important;
+    }
+    
+    .arkly-feature-card h3 {
+        font-size: var(--text-lg) !important;
+        margin-bottom: var(--spacing-3) !important;
+    }
+    
+    .arkly-feature-card p {
+        font-size: var(--text-sm) !important;
+    }
+    
+    .arkly-stat-item,
+    .arkly-stat-card {
+        padding: var(--spacing-5) !important;
+    }
+    
+    .arkly-stat-number {
+        font-size: var(--text-3xl) !important;
+    }
+    
+    .arkly-security-pillar,
+    .arkly-insight-card,
+    .arkly-report-card {
+        padding: var(--spacing-5) !important;
+    }
+    
+    .arkly-feature-icon,
+    .arkly-security-icon {
+        width: 36px !important;
+        height: 36px !important;
+        margin-bottom: var(--spacing-4) !important;
+    }
+
+    /* Animation du bouton hamburger */
+    .arkly-mobile-menu-toggle--open span:first-child {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .arkly-mobile-menu-toggle--open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .arkly-mobile-menu-toggle--open span:last-child {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* Réduction générale des tailles de texte sur mobile */
+    h1 {
+        font-size: var(--text-2xl) !important;
+    }
+    
+    h2 {
+        font-size: var(--text-xl) !important;
+    }
+    
+    h3 {
+        font-size: var(--text-lg) !important;
+    }
+    
+    p {
+        font-size: var(--text-sm) !important;
+        line-height: 1.5;
+    }
+    
+    /* Espacement spécifique pour les headers de page */
+    .arkly-page-header {
+        margin-bottom: var(--spacing-8);
+    }
+    
+    .arkly-page-header h1 {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    /* Réduction des padding et margins des blocs sur mobile */
+    .arkly-feature-card,
+    .arkly-stat-item,
+    .arkly-security-pillar,
+    .arkly-cert-card,
+    .arkly-bounty-tier,
+    .arkly-insight-card,
+    .arkly-report-card,
+    .arkly-media-item,
+    .arkly-contact-method,
+    .arkly-legal-content,
+    .arkly-security-category,
+    .arkly-podcast-item,
+    div[style*="padding: var(--spacing-8)"],
+    div[style*="padding: var(--spacing-10)"] {
+        padding: var(--spacing-4) !important;
+    }
+    
+    /* Réduction des gaps dans les grilles */
+    .arkly-features-grid,
+    .arkly-stats-grid,
+    .arkly-security-grid,
+    .arkly-certifications-grid,
+    .arkly-insights-grid,
+    .arkly-reports-grid,
+    .arkly-media-grid,
+    .arkly-contact-cards,
+    div[style*="gap: var(--spacing-8)"],
+    div[style*="gap: var(--spacing-10)"],
+    div[style*="gap: var(--spacing-12)"] {
+        gap: var(--spacing-4) !important;
+    }
+    
+    /* Réduction des marges des sections */
+    section {
+        padding: var(--spacing-8) 0 !important;
+    }
+    
+    /* Réduction des marges internes des blocs */
+    .arkly-feature-icon,
+    .arkly-security-icon,
+    .arkly-cert-logo {
+        width: 32px !important;
+        height: 32px !important;
+        margin-bottom: var(--spacing-3) !important;
+    }
+    
+    /* Réduction des espacements dans les headers */
+    .arkly-page-header,
+    .arkly-features-header,
+    .arkly-section-header {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    /* Réduction des espacements spécifiques aux inline styles */
+    div[style*="margin-bottom: var(--spacing-12)"] {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    div[style*="margin-bottom: var(--spacing-10)"] {
+        margin-bottom: var(--spacing-5) !important;
+    }
+    
+    div[style*="margin-bottom: var(--spacing-8)"] {
+        margin-bottom: var(--spacing-4) !important;
+    }
+    
+    /* Ajustements pour les grilles avec minmax */
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"],
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Réduction de la hauteur des icônes et éléments décoratifs */
+    .arkly-divider {
+        margin: var(--spacing-4) 0 !important;
+    }
+    
+    /* Optimisation des cartes avec style inline */
+    div[style*="border-radius: 12px"] {
+        border-radius: 8px !important;
+        padding: var(--spacing-4) !important;
+    }
+
+    /* Réduction générale des tailles de texte sur mobile */
+    h1 {
+        font-size: var(--text-2xl) !important;
+    }
+    
+    h2 {
+        font-size: var(--text-xl) !important;
+    }
+    
+    h3 {
+        font-size: var(--text-lg) !important;
+    }
+    
+    p {
+        font-size: var(--text-sm) !important;
+        line-height: 1.5;
+    }
+    
+    /* Espacement spécifique pour les headers de page */
+    .arkly-page-header {
+        margin-bottom: var(--spacing-8);
+    }
+    
+    .arkly-page-header h1 {
+        margin-bottom: var(--spacing-6) !important;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -121,6 +910,25 @@
     
     .arkly-nav {
         padding: 0 var(--spacing-5);
+    }
+    
+    /* Limitation des boutons pour tablettes aussi */
+    .arkly-btn {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .arkly-nav-cta {
+        max-width: 140px;
+        width: auto;
+    }
+    
+    .arkly-btn-primary,
+    .arkly-btn-secondary,
+    button[onclick*="joinWaitlist"],
+    a[href*="waitlist"]:not(.arkly-nav-cta) {
+        max-width: 220px;
+        width: auto;
     }
     
     /* Navigation mobile pour cette taille aussi */
@@ -171,10 +979,161 @@
     .arkly-mobile-menu-toggle--open span:last-child {
         transform: rotate(-45deg) translate(7px, -6px);
     }
+    
+    /* Réduction générale des tailles de texte sur mobile */
+    h1 {
+        font-size: var(--text-2xl) !important;
+    }
+    
+    h2 {
+        font-size: var(--text-xl) !important;
+    }
+    
+    h3 {
+        font-size: var(--text-lg) !important;
+    }
+    
+    p {
+        font-size: var(--text-sm) !important;
+        line-height: 1.5;
+    }
+    
+    /* Espacement spécifique pour les headers de page */
+    .arkly-page-header {
+        margin-bottom: var(--spacing-8);
+    }
+    
+    .arkly-page-header h1 {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    /* Réduction des padding et margins des blocs sur mobile */
+    .arkly-feature-card,
+    .arkly-stat-item,
+    .arkly-security-pillar,
+    .arkly-cert-card,
+    .arkly-bounty-tier,
+    .arkly-insight-card,
+    .arkly-report-card,
+    .arkly-media-item,
+    .arkly-contact-method,
+    .arkly-legal-content,
+    .arkly-security-category,
+    .arkly-podcast-item,
+    div[style*="padding: var(--spacing-8)"],
+    div[style*="padding: var(--spacing-10)"] {
+        padding: var(--spacing-5) !important;
+    }
+    
+    /* Réduction des gaps dans les grilles */
+    .arkly-features-grid,
+    .arkly-stats-grid,
+    .arkly-security-grid,
+    .arkly-certifications-grid,
+    .arkly-insights-grid,
+    .arkly-reports-grid,
+    .arkly-media-grid,
+    .arkly-contact-cards,
+    div[style*="gap: var(--spacing-8)"],
+    div[style*="gap: var(--spacing-10)"],
+    div[style*="gap: var(--spacing-12)"] {
+        gap: var(--spacing-5) !important;
+    }
+    
+    /* Réduction des marges des sections */
+    section {
+        padding: var(--spacing-10) 0 !important;
+    }
+    
+    /* Réduction des marges internes des blocs */
+    .arkly-feature-icon,
+    .arkly-security-icon,
+    .arkly-cert-logo {
+        width: 36px !important;
+        height: 36px !important;
+        margin-bottom: var(--spacing-4) !important;
+    }
+    
+    /* Réduction des espacements dans les headers */
+    .arkly-page-header,
+    .arkly-features-header,
+    .arkly-section-header {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    /* Réduction des espacements spécifiques aux inline styles */
+    div[style*="margin-bottom: var(--spacing-12)"] {
+        margin-bottom: var(--spacing-6) !important;
+    }
+    
+    div[style*="margin-bottom: var(--spacing-10)"] {
+        margin-bottom: var(--spacing-5) !important;
+    }
+    
+    div[style*="margin-bottom: var(--spacing-8)"] {
+        margin-bottom: var(--spacing-4) !important;
+    }
+    
+    /* Ajustements pour les grilles avec minmax */
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"],
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    /* Réduction de la hauteur des icônes et éléments décoratifs */
+    .arkly-divider {
+        margin: var(--spacing-4) 0 !important;
+    }
+    
+    /* Optimisation des cartes avec style inline */
+    div[style*="border-radius: 12px"] {
+        border-radius: 8px !important;
+        padding: var(--spacing-4) !important;
+    }
+
+    /* Réduction générale des tailles de texte sur mobile */
+    h1 {
+        font-size: var(--text-2xl) !important;
+    }
+    
+    h2 {
+        font-size: var(--text-xl) !important;
+    }
+    
+    h3 {
+        font-size: var(--text-lg) !important;
+    }
+    
+    p {
+        font-size: var(--text-sm) !important;
+        line-height: 1.5;
+    }
+    
+    /* Espacement spécifique pour les headers de page */
+    .arkly-page-header {
+        margin-bottom: var(--spacing-8);
+    }
+    
+    .arkly-page-header h1 {
+        margin-bottom: var(--spacing-6) !important;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    /* Tailles optimisées pour tablettes */
+    .arkly-logo-img {
+        max-height: 40px !important; /* Taille intermédiaire légèrement plus grande */
+    }
+    
+    .arkly-hero-content img[alt="arkly.capital"] {
+        max-height: 42px !important; /* Taille intermédiaire légèrement plus grande */
+    }
+    
+    .subtitle {
+        font-size: var(--text-lg) !important; /* Taille intermédiaire plus grande */
+    }
+    
     /* Header améliorations */
     .arkly-nav-links {
         display: flex !important;
@@ -235,6 +1194,23 @@
     section {
         padding: var(--spacing-20) 0;
     }
+    
+    /* Boutons - tailles optimisées pour tablettes */
+    .arkly-nav-cta {
+        max-width: 160px !important;
+    }
+    
+    .arkly-btn-primary,
+    .arkly-btn-secondary {
+        max-width: 250px !important;
+    }
+    
+    .arkly-btn,
+    button[class*="waitlist"],
+    a[href*="waitlist"],
+    .btn-waitlist {
+        max-width: 300px !important;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -277,12 +1253,39 @@
     section {
         padding: var(--spacing-24) 0;
     }
+    
+    /* Logo plus petit sur desktop - 20% de réduction */
+    .arkly-logo-img {
+        max-height: 14px !important; /* Réduit de ~20% par rapport à la taille standard */
+        width: auto;
+    }
+    
+    /* Rétablir l'alignement à gauche sur desktop */
+    .arkly-page-header,
+    .arkly-hero-content,
+    .arkly-features-header,
+    .arkly-section-header {
+        text-align: left !important;
+    }
+    
+    .arkly-page-header h1,
+    .arkly-features-header h2,
+    .arkly-section-header h2,
+    .arkly-page-header p,
+    .arkly-features-header p,
+    .arkly-section-header p {
+        text-align: left !important;
+        margin: initial !important;
+        max-width: none !important;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .arkly-hero h1 {
-        font-size: var(--text-7xl);
+    /* Logo reste à la même taille réduite */
+    .arkly-logo-img {
+        max-height: 14px !important; /* Maintient la réduction de 20% */
+        width: auto;
     }
     
     .arkly-hero-content {
