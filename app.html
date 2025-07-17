@@ -215,7 +215,7 @@
                     <div class="arkly-badge" style="background: linear-gradient(135deg, #8b5cf6, #06b6d4); color: white; margin-bottom: var(--spacing-4);">🏠 $ARK Token Purchase</div>
                     <h2 style="margin-bottom: var(--spacing-4);">Buy $ARK Tokens</h2>
                     <p style="color: var(--text-secondary); font-size: var(--text-lg); line-height: var(--leading-relaxed); max-width: 600px; margin: 0 auto;">
-                        Purchase $ARK Tokenss to access tokenized real estate investments on Solana. 
+                        Purchase $ARK Tokens to access tokenized real estate investments on Solana. 
                         Fixed price at <strong>$0.10 per $ARK</strong>.
                     </p>
                 </div>
@@ -283,7 +283,7 @@
                                 </div>
                                 <div>
                                     <div id="tokenAmount" style="font-weight: var(--font-bold); color: var(--accent);">0</div>
-                                    <div style="font-size: var(--text-sm); color: var(--text-secondary);">$ARK Tokenss</div>
+                                    <div style="font-size: var(--text-sm); color: var(--text-secondary);">$ARK Tokens</div>
                                 </div>
                                 <div>
                                     <div style="font-weight: var(--font-bold); color: var(--success-text, #059669);">$0.10</div>
@@ -607,7 +607,7 @@
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--spacing-2);">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                         </svg>
-                        Buy $ARK Tokenss (Connected)
+                        Buy $ARK Tokens (Connected)
                     `;
                 }
             }
@@ -745,12 +745,12 @@
                         throw new Error('Transaction failed: ' + JSON.stringify(confirmation.value.err));
                     }
                     
-                    // Calculate $ARK Tokenss to be received
+                    // Calculate $ARK Tokens to be received
                     const usdValue = solAmount * solPrice;
                     const arklTokens = Math.floor(usdValue / tokenPrice);
                     
                     showNotification(
-                        `🎉 Presale successful! You sent ${solAmount} SOL and will receive ${arklTokens.toLocaleString()} $ARK Tokenss. Transaction: ${signature.slice(0, 8)}...${signature.slice(-8)}`,
+                        `🎉 Presale successful! You sent ${solAmount} SOL and will receive ${arklTokens.toLocaleString()} $ARK Tokens. Transaction: ${signature.slice(0, 8)}...${signature.slice(-8)}`,
                         'success'
                     );
                     
@@ -759,7 +759,7 @@
                     console.log(`Wallet: ${wallet.publicKey.toString()}`);
                     console.log(`SOL sent: ${solAmount}`);
                     console.log(`USD value: $${usdValue.toFixed(2)}`);
-                    console.log(`$ARK Tokenss: ${arklTokens}`);
+                    console.log(`$ARK Tokens: ${arklTokens}`);
                     console.log(`Transaction signature: ${signature}`);
                     console.log(`View transaction: https://solscan.io/tx/${signature}`);
                     
@@ -980,7 +980,7 @@
             if (usdcAmount > 0) {
                 const arklyTokens = Math.floor(usdcAmount / tokenPrice);
                 
-                // Update to show $ARK Tokenss
+                // Update to show $ARK Tokens
                 tokenOutput.value = `${arklyTokens.toLocaleString()} ARKLY`;
                 
                 // Show calculation results

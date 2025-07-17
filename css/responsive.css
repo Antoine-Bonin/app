@@ -896,6 +896,11 @@
     .arkly-page-header h1 {
         margin-bottom: var(--spacing-6) !important;
     }
+    
+    /* Centrage des boutons sociaux sur mobile */
+    .arkly-social-links {
+        justify-content: center !important;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
